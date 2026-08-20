@@ -15,3 +15,6 @@ class Example(OrchestrationScript):
     }
     def run(self) -> None:
         raise NotImplementedError("Define the workspace logic here.")
+
+
+    
