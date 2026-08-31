@@ -5,14 +5,14 @@
     "PluginName": "test_lib::ComponentPluginComplexCpp",
     "Library": "test_lib",
     "SubcomponentSpec": {
-        "ctl_1": "rpp_testing::MotionController2D"
+        "ctl1": "rpp_testing::MotionController2D"
     },
     "Subcomponents": {
-        "ctl_1": {
+        "ctl1": {
             "Id": "f9c33ed9-6472-4426-b643-ae99db4fbb7b",
             "PluginType": "rpp_testing::MotionController2D",
-            "PluginName": "test_lib::ComponentPluginComplexPy",
-            "SlotName": "ctl_1",
+            "PluginName": "test_lib::ComponentPluginSimpleCpp",
+            "SlotName": "ctl1",
             "Library": "test_lib",
             "IsLinked": false
         }

@@ -18,13 +18,15 @@ RPP_PARAM_STRUCT(TestStruct2,
 class ComponentPluginSimpleCpp : public rpp_testing::MotionController2D
 {
     public:
+    const rpp::ComponentContext* context_ = nullptr;
 
     RPP_PARAMETERS(
         rpp::params::ParameterDescription::create<int>("int_var", 2),
         rpp::params::ParameterDescription::create<float>("float_var", 6.0f),
         rpp::params::ParameterDescription::create<std::string>("str_var", "test1"),
         rpp::params::ParameterDescription::create<TestStruct1>("struct1_var", TestStruct1{}),
-        rpp::params::ParameterDescription::create<TestStruct2>("struct2_var", TestStruct2{})
+        rpp::params::ParameterDescription::create<TestStruct2>("struct2_var", TestStruct2{}),
+        rpp::params::ParameterDescription::create<double>("validate_threshold", 5.0)
     )
 
     ComponentPluginSimpleCpp() = default;
@@ -33,7 +35,7 @@ class ComponentPluginSimpleCpp : public rpp_testing::MotionController2D
 
     void initialize(const rpp::ComponentContext& context) override
     {
-        // Do nothing for this example plugin
+        context_ = &context;
     }
 
     VectorPlanar::Const step(Odometry2D::Const state, double dt) override
@@ -64,7 +66,15 @@ class ComponentPluginSimpleCpp : public rpp_testing::MotionController2D
     bool validate(Odometry2D::Const state) override
     {
         auto x = state.pose().position().x();
-        return x > 5.0;
+        auto threshold = 5.0;
+        if (context_ != nullptr) {
+            threshold = context_->get_parameter<double>("validate_threshold");
+        }
+        if (context_ != nullptr) {
+            RPP_LOG_DEBUG(*context_->get_logger(),
+                "Validating odometry with x: {}. Threshold: {}", x, threshold);
+        }
+        return x > threshold;
     }
 
 };

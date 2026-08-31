@@ -18,16 +18,22 @@ class ComponentPluginSimplePy(MotionController2D):
         ParameterDescription("param4", True),
         ParameterDescription("param5", [2, 3, 4]),
         ParameterDescription("param6", {"key1": "value2", "key2": 3}),
-        ParameterDescription("param7", SuperClass(a=11))
+        ParameterDescription("param7", SuperClass(a=11)),
+        ParameterDescription("validate_threshold", 5.0)
     ]
 
     def __init__(self):
         super().__init__()
 
+    def initialize(self, context):
+        self._context = context
+
     def validate(self, state : MotionController2D.Odometry2D) -> bool:
+        self._context.get_logger().debug(f"Validating odometry with x: {state.pose.position.x}."
+            + f"Threshold: {self._context.get_parameter('validate_threshold', 5.0)}")
 
         x = state.pose.position.x
-        return x > 5.0
+        return x > self._context.get_parameter("validate_threshold", 5.0)
 
     def step(self, state: MotionController2D.Odometry2D, dt: float) -> None:
         # Implement the control logic here

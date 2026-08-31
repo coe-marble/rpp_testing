@@ -10,4 +10,3 @@ class ComponentParameters:
         "height": "500",
         "fps": 35.0
     }
-    validate_subcomponent: bool = True
