@@ -18,6 +18,8 @@ RPP_PARAM_STRUCT(TestStruct2,
 class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
 {
     public:
+    const rpp::ComponentContext* context_ = nullptr;
+
     RPP_COMPONENTS(
         {"ctl_1", "rpp_testing::MotionController2D"},
         {"ctl_2", "rpp_testing::DisturbanceController2D"}
@@ -28,7 +30,8 @@ class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
         rpp::params::ParameterDescription::create<float>("float_var", 5.0f),
         rpp::params::ParameterDescription::create<std::string>("str_var", "test"),
         rpp::params::ParameterDescription::create<TestStruct1>("struct1_var", TestStruct1{}),
-        rpp::params::ParameterDescription::create<TestStruct2>("struct2_var", TestStruct2{})
+        rpp::params::ParameterDescription::create<TestStruct2>("struct2_var", TestStruct2{}),
+        rpp::params::ParameterDescription::create<bool>("validate_subcomponent", false)
     )
 
     ComponentPluginComplexCpp() = default;
@@ -37,7 +40,7 @@ class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
 
     void initialize(const rpp::ComponentContext& context) override
     {
-        // Do nothing for this example plugin
+        context_ = &context;
     }
 
     VectorPlanar::Const step(Odometry2D::Const state, double dt) override
@@ -68,7 +71,19 @@ class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
     bool validate(Odometry2D::Const state) override
     {
         auto x = state.pose().position().x();
-        return x > 5.0;
+        if (x <= 5.0) {
+            RPP_LOG_DEBUG(*context_->get_logger(), "Odometry x is less than or equal to 5.0: {}", x);
+            return false;
+        }
+        if (context_ != nullptr &&
+                context_->get_parameter<bool>("validate_subcomponent")) {
+            RPP_LOG_DEBUG(*context_->get_logger(), "Validating subcomponent ctl_1 with odometry x: {}", x);
+            auto subcomponent =
+                context_->get_component<rpp_testing::MotionController2D>("ctl_1");
+            return subcomponent->validate(std::move(state));
+        }
+        RPP_LOG_DEBUG(*context_->get_logger(), "Odometry x is greater than 5.0: {}", x);
+        return false;
     }
 
 };

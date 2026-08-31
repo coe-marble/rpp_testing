@@ -4,6 +4,7 @@ from __future__ import annotations
 class ComponentParameters:
 
     float_var: float = 10
+    validate_subcomponent: bool = True
     struct2_var = {
         "struct1" : {
             "width": 800,

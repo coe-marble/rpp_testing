@@ -1,0 +1,10 @@
+{
+    "Id": "9d0e1f2a-3b4c-5678-cdef-1234567890ab",
+    "Name": "simple_python_component",
+    "PluginType": "rpp_testing::MotionController2D",
+    "PluginName": "test_lib::ComponentPluginSimplePy",
+    "Library": "test_lib",
+    "SubcomponentSpec": {},
+    "Subcomponents": {},
+    "ParentComponentInfo": null
+}

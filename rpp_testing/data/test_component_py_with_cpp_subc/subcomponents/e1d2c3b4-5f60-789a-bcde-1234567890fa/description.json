@@ -1,27 +1,27 @@
 {
-    "Id": "f9c33ed9-6472-4426-b643-ae99db4fbb7b",
-    "Name": "subcomponent1",
+    "Id": "e1d2c3b4-5f60-789a-bcde-1234567890fa",
+    "Name": "cpp_subcomponent",
     "PluginType": "rpp_testing::MotionController2D",
-    "PluginName": "test_lib::ComponentPluginComplexPy",
+    "PluginName": "test_lib::ComponentPluginComplexCpp",
     "Library": "test_lib",
     "SubcomponentSpec": {
-        "ctl_main": "rpp_testing::MotionController2D"
+        "ctl_1": "rpp_testing::MotionController2D"
     },
     "Subcomponents": {
-        "ctl_main": {
+        "ctl_1": {
             "Id": "d0c1a2b3-4e5f-6789-abcd-0123456789ef",
             "PluginType": "rpp_testing::MotionController2D",
-            "PluginName": "test_lib::ComponentPluginSimpleCpp",
-            "SlotName": "ctl_main",
+            "PluginName": "test_lib::ComponentPluginSimplePy",
+            "SlotName": "ctl_1",
             "Library": "test_lib",
             "IsLinked": false
         }
     },
     "ParentComponentInfo": {
-        "Id": "7bfa9573-ed97-425e-be6a-4334b40cb404",
+        "Id": "8cfa9573-ed97-442e-be6a-4334b40cb405",
         "PluginType": "rpp_testing::MotionController2D",
-        "PluginName": "test_lib::ComponentPluginComplexCpp",
-        "SlotName": "ctl_1",
+        "PluginName": "test_lib::ComponentPluginComplexPy",
+        "SlotName": "ctl_main",
         "Library": "test_lib",
         "IsLinked": false
     }
