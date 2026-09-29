@@ -1,5 +1,5 @@
 {
-    "ScriptPath": "/tmp/pytest-of-luka/pytest-6/test_create_mock_workspace_pop0/mock_workspace/example.py",
+    "ScriptPath": "example.py",
     "Language": "python",
     "Configurations": {
         "Default": {
