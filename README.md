@@ -1,6 +1,7 @@
 # rpp_testing
 
-A python package that installs testing data for rpp.
+A Python package that installs testing data for RPP. Its fixture files are
+declared as package data, so wheels and source distributions retain them.
 This package is used by the other packages in a way that allows them to run tests without having to include the testing data in their own repositories. The testing data is stored in a separate repository and is installed as a package dependency.
 
 # Description
