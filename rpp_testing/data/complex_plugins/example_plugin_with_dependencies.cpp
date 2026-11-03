@@ -1,8 +1,7 @@
 #include <rpp_plugin_types/rpp_testing/MotionController2D.hpp>
 #include <rpp_schema/rpp_common/Path2D.hpp>
 #include <rpp_schema/rpp_common/Command.hpp>
-#include <rclcpp/rclcpp.hpp> // test rclcpp dependency
-#include <zlib.h> // test zlib dependency
+#include <zlib.h>
 
 RPP_PARAM_STRUCT(TestStruct1,
     RPP_MEMBER(int, width, 640),
@@ -63,13 +62,10 @@ class ComponentPluginWithDependencies : public rpp_testing::MotionController2D
         vector.y() = command.data()[1];
         vector.yaw() = 3.14;
 
-        z_stream zstream;
-        zstream.zalloc = Z_NULL;
-        zstream.zfree = Z_NULL;
-        zstream.opaque = Z_NULL;
-
-        auto node = std::make_shared<rclcpp::Node>("test_node");
-        node->get_logger().set_level(rclcpp::Logger::Level::Debug);
+        z_stream zstream{};
+        if (deflateInit(&zstream, Z_DEFAULT_COMPRESSION) == Z_OK) {
+            deflateEnd(&zstream);
+        }
 
         return std::move(vector);
     }
