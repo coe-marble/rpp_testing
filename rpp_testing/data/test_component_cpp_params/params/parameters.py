@@ -11,7 +11,7 @@ class StructType:
 
 @dataclass
 class ComplextStructType:
-    test_struct: StructType = StructType()
+    test_struct: StructType = field(default_factory=StructType)
     test_struct_list: list[StructType] = field(default_factory=lambda: [StructType(), StructType(width=2, height="3", fps=4.0)])
     test_struct_map: dict[str, StructType] = field(default_factory=lambda: {
         "first": StructType(),
