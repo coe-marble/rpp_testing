@@ -34,9 +34,10 @@ class ComponentPluginWithDependencies : public rpp_testing::MotionController2D
 
     virtual ~ComponentPluginWithDependencies() = default;
 
-    void initialize(const rpp::ComponentContext& context) override
+    rpp::CallbackResult on_configure(const rpp::ComponentContext& context) override
     {
         // Do nothing for this example plugin
+        return {};
     }
 
     VectorPlanar::Const step(Odometry2D::Const state, double dt) override

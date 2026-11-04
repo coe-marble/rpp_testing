@@ -12,9 +12,10 @@ public:
 
     virtual ~ComponentPluginWithTypeAliasOutsideClass() = default;
 
-    void initialize(const rpp::ComponentContext& context) override
+    rpp::CallbackResult on_configure(const rpp::ComponentContext& context) override
     {
         // Do nothing for this example plugin
+        return {};
     }
 
     Controller::VectorPlanar::Const step(Controller::Odometry2D::Const state, double dt) override

@@ -38,9 +38,10 @@ class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
 
     virtual ~ComponentPluginComplexCpp() = default;
 
-    void initialize(const rpp::ComponentContext& context) override
+    rpp::CallbackResult on_configure(const rpp::ComponentContext& context) override
     {
         context_ = &context;
+        return {};
     }
 
     VectorPlanar::Const step(Odometry2D::Const state, double dt) override
