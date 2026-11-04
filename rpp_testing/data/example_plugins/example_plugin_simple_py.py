@@ -4,6 +4,7 @@ from __future__ import annotations
 from rpp_plugin_types.rpp_testing import MotionController2D
 from rpp_plugin_types.rpp_testing import DisturbanceGenerator2D
 from rpp_py.plugin import ParameterDescription
+from rpp_common.lifecycle import CallbackResult
 
 class SuperClass:
     def __init__(self, a = 1, b = 2):
@@ -25,8 +26,9 @@ class ComponentPluginSimplePy(MotionController2D):
     def __init__(self):
         super().__init__()
 
-    def initialize(self, context):
+    def on_configure(self, context):
         self._context = context
+        return CallbackResult()
 
     def validate(self, state : MotionController2D.Odometry2D) -> bool:
         self._context.get_logger().debug(f"Validating odometry with x: {state.pose.position.x}."

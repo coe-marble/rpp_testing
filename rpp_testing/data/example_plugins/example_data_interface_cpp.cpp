@@ -9,9 +9,10 @@ class DataInterfaceCpp : public rpp_testing::DisturbanceGenerator2D
 
     virtual ~DataInterfaceCpp() = default;
 
-    void initialize(const rpp::ComponentContext& context) override
+    rpp::CallbackResult on_configure(const rpp::ComponentContext& context) override
     {
         // Do nothing for this example plugin
+        return {};
     }
 
     bool validate(Pose2D::Const state) override
