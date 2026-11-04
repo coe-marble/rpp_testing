@@ -4,7 +4,7 @@ from __future__ import annotations
 from rpp_plugin_types.rpp_testing import MotionController2D
 from rpp_plugin_types.rpp_testing import DisturbanceGenerator2D
 from rpp_py.plugin import ParameterDescription
-from rpp_common.lifecycle import CallbackResult
+from rpp_py.lifecycle import CallbackResult
 
 class SuperClass:
     def __init__(self, a = 1, b = 2):
