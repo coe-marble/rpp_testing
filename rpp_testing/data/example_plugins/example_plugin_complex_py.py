@@ -44,7 +44,7 @@ class ComponentPluginComplexPy(MotionController2D):
             return False
         if self.context.get_parameter("validate_subcomponent", False):
             self.context.get_logger().debug(f"Validating subcomponent ctl_1 with odometry x: {x}")
-            child = self.context.get_component("ctl_main")
+            child = self.context.get_subcomponent_context("ctl_main").get_instance()
             return child.validate(state)
         self.context.get_logger().debug(f"Odometry x is greater than 5.0: {x}")
         return False
