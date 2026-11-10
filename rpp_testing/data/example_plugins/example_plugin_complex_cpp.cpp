@@ -80,7 +80,7 @@ class ComponentPluginComplexCpp : public rpp_testing::MotionController2D
                 context_->get_parameter<bool>("validate_subcomponent")) {
             RPP_LOG_DEBUG(*context_->get_logger(), "Validating subcomponent ctl_1 with odometry x: {}", x);
             auto subcomponent =
-                context_->get_component<rpp_testing::MotionController2D>("ctl_1");
+                context_->get_subcomponent_instance<rpp_testing::MotionController2D>("ctl_1");
             return subcomponent->validate(std::move(state));
         }
         RPP_LOG_DEBUG(*context_->get_logger(), "Odometry x is greater than 5.0: {}", x);
