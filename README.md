@@ -4,6 +4,19 @@ A Python package that installs testing data for RPP. Its fixture files are
 declared as package data, so wheels and source distributions retain them.
 This package is used by the other packages in a way that allows them to run tests without having to include the testing data in their own repositories. The testing data is stored in a separate repository and is installed as a package dependency.
 
+## Precompiled fixture
+
+`scripts/build_rpp_autogen.sh` creates `rpp_autogen/.rpp`, including generated
+interfaces and precompiled fixture plugins. It is intended for the manually
+triggered `rpp_autogen` publishing workflow. The script clones `rpp_dev`,
+builds it with tests disabled, and runs the existing RPP test-fixture setup.
+
+Configure the source revision and output location with `RPP_DEV_REF` and
+`RPP_AUTOGEN_DIR` respectively.
+
+Pass `--local` to reuse the already-built ROS workspace containing this
+checkout of `rpp_testing`; this skips both the clone and the build.
+
 # Description
 
 
