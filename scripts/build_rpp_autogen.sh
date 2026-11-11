@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Build the complete, precompiled RPP test fixture for publication.
 #
-# The output is deliberately independent of a consumer's build directory:
-# rpp_cpp test jobs download rpp_autogen instead of registering and compiling
-# fixture plugins themselves. Pass --local to reuse the already-built workspace
-# that contains this checkout of rpp_testing.
+# The output is consumed directly from rpp_testing/rpp_autogen by rpp_cpp test
+# builds. Pass --local to reuse the already-built workspace that contains this
+# checkout of rpp_testing.
 set -euo pipefail
 
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly RPP_TESTING_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
-readonly AUTOGEN_DIR="${RPP_AUTOGEN_DIR:-${RPP_TESTING_DIR}/rpp_autogen}"
+readonly RPP_TESTING_PACKAGE_DIR="${RPP_TESTING_DIR}/rpp_testing"
+readonly AUTOGEN_DIR="${RPP_AUTOGEN_DIR:-${RPP_TESTING_PACKAGE_DIR}/rpp_autogen}"
 readonly RPP_DEV_REPOSITORY="${RPP_DEV_REPOSITORY:-https://github.com/coe-marble/rpp_dev.git}"
 readonly RPP_DEV_REF="${RPP_DEV_REF:-main}"
 readonly ROS_DISTRO_NAME="${ROS_DISTRO:-lyrical}"
@@ -66,8 +66,15 @@ else
 fi
 mkdir -p "${AUTOGEN_DIR}"
 
-# shellcheck disable=SC1090
-source "${ROS_SETUP}"
+source_setup() {
+  # ROS/ament setup scripts intentionally inspect optional unset variables.
+  set +u
+  # shellcheck disable=SC1090
+  source "$1"
+  set -u
+}
+
+source_setup "${ROS_SETUP}"
 pushd "${WORKSPACE}" >/dev/null
 
 if [[ "${LOCAL}" == false ]]; then
@@ -76,8 +83,7 @@ if [[ "${LOCAL}" == false ]]; then
   colcon build --cmake-args -DBUILD_TESTING=OFF
 fi
 
-# shellcheck disable=SC1091
-source "${WORKSPACE}/install/setup.bash"
+source_setup "${WORKSPACE}/install/setup.bash"
 export RPP_HOME="${RPP_CONFIG_HOME}"
 export RPP_CPP_CORE_PATH="${WORKSPACE}/build/rpp_cpp"
 export RPP_USE_ROS2_COMPILATION=true

@@ -1,0 +1,22 @@
+{
+  "Name": "AllInterfaceTypesCpp",
+  "PluginName": "test_lib::AllInterfaceTypesCpp",
+  "Library": "test_lib",
+  "Description": "No description provided.",
+  "SourceFile": "plugins/example_all_interface_types_cpp.cpp",
+  "IsCasadi": false,
+  "SourceLanguage": "cpp",
+  "PluginType": "rpp_testing::TestInterfaceAll",
+  "PluginTypeClassName": "TestInterfaceAll",
+  "FullyQualifiedPluginClassName": "<class 'rpp_plugin_types.rpp_testing.TestInterfaceAll.TestInterfaceAll'>",
+  "FullyQualifiedClassName": "rpp_testing::TestInterfaceAll",
+  "ClassName": "AllInterfaceTypesCpp",
+  "PluginTypeLibrary": "rpp_testing",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginSharedLibraryPath": "cpp/shared/test_lib/plugins/AllInterfaceTypesCpp.so",
+  "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/TestInterfaceAll.so",
+  "PluginMetadata": {
+    "Parameters": {},
+    "Components": {}
+  }
+}

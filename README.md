@@ -6,10 +6,12 @@ This package is used by the other packages in a way that allows them to run test
 
 ## Precompiled fixture
 
-`scripts/build_rpp_autogen.sh` creates `rpp_autogen/.rpp`, including generated
-interfaces and precompiled fixture plugins. It is intended for the manually
-triggered `rpp_autogen` publishing workflow. The script clones `rpp_dev`,
-builds it with tests disabled, and runs the existing RPP test-fixture setup.
+`scripts/build_rpp_autogen.sh` creates `rpp_testing/rpp_autogen/.rpp`,
+including generated interfaces and precompiled fixture plugins. It is intended
+for the manually triggered fixture publishing workflow. `rpp_cpp` consumes
+this directory directly; it does not generate or download test artifacts. The
+script clones `rpp_dev`, builds it with tests disabled, and runs the existing
+RPP test-fixture setup.
 
 Configure the source revision and output location with `RPP_DEV_REF` and
 `RPP_AUTOGEN_DIR` respectively.

@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# The precompiled test fixture is deliberately versioned.  It is consumed by
+# rpp_cpp's tests, which must not compile test plugins as part of their build.
+!rpp_testing/rpp_autogen/**/*.so
+
 # Distribution / packaging
 .Python
 build/

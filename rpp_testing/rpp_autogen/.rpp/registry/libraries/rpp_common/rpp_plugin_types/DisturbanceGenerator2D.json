@@ -1,0 +1,66 @@
+{
+  "Name": "DisturbanceGenerator2D",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/disturbance_generator.capnp",
+  "ClassName": "DisturbanceGenerator2D",
+  "SourceLanguage": "capnp",
+  "Methods": [
+    {
+      "Name": "step",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose2D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose2D"
+          }
+        },
+        {
+          "Name": "dt",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "state_disturbed",
+          "Type": {
+            "Name": "Pose2D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose2D"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "validate",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose2D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose2D"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "ok",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    }
+  ],
+  "Library": "rpp_common",
+  "PluginTypeName": "rpp_common::DisturbanceGenerator2D",
+  "Id": "rpp_common__disturbance_generator2_d",
+  "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator2D.DisturbanceGenerator2D'>",
+  "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_common/disturbance_generator.capnp",
+  "RegistryPluginTypeFileId": "c56d8bcca7bfaf21"
+}

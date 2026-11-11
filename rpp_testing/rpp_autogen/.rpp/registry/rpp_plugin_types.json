@@ -1,0 +1,96 @@
+{
+  "SchemaVersion": 1,
+  "System": "rpp",
+  "PluginTypes": {
+    "rpp_testing::DisturbanceGenerator2D": {
+      "Id": "rpp_testing__disturbance_generator2_d",
+      "Name": "DisturbanceGenerator2D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+      "ClassName": "DisturbanceGenerator2D",
+      "PluginTypeName": "rpp_testing::DisturbanceGenerator2D",
+      "Library": "rpp_testing",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.DisturbanceGenerator2D.DisturbanceGenerator2D'>"
+    },
+    "rpp_testing::MotionController2D": {
+      "Id": "rpp_testing__motion_controller2_d",
+      "Name": "MotionController2D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+      "ClassName": "MotionController2D",
+      "PluginTypeName": "rpp_testing::MotionController2D",
+      "Library": "rpp_testing",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>"
+    },
+    "rpp_testing::TestInterfaceAll": {
+      "Id": "rpp_testing__test_interface_all",
+      "Name": "test",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+      "ClassName": "TestInterfaceAll",
+      "PluginTypeName": "rpp_testing::TestInterfaceAll",
+      "Library": "rpp_testing",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.TestInterfaceAll.TestInterfaceAll'>"
+    },
+    "rpp_common::Estimator2D": {
+      "Id": "rpp_common__estimator2_d",
+      "Name": "Estimator2D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/estimator.capnp",
+      "ClassName": "Estimator2D",
+      "PluginTypeName": "rpp_common::Estimator2D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator2D.Estimator2D'>"
+    },
+    "rpp_common::Estimator3D": {
+      "Id": "rpp_common__estimator3_d",
+      "Name": "Estimator3D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/estimator.capnp",
+      "ClassName": "Estimator3D",
+      "PluginTypeName": "rpp_common::Estimator3D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator3D.Estimator3D'>"
+    },
+    "rpp_common::DisturbanceGenerator2D": {
+      "Id": "rpp_common__disturbance_generator2_d",
+      "Name": "DisturbanceGenerator2D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/disturbance_generator.capnp",
+      "ClassName": "DisturbanceGenerator2D",
+      "PluginTypeName": "rpp_common::DisturbanceGenerator2D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator2D.DisturbanceGenerator2D'>"
+    },
+    "rpp_common::DisturbanceGenerator3D": {
+      "Id": "rpp_common__disturbance_generator3_d",
+      "Name": "DisturbanceGenerator3D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/disturbance_generator.capnp",
+      "ClassName": "DisturbanceGenerator3D",
+      "PluginTypeName": "rpp_common::DisturbanceGenerator3D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator3D.DisturbanceGenerator3D'>"
+    },
+    "rpp_common::DynamicalSystem2D": {
+      "Id": "rpp_common__dynamical_system2_d",
+      "Name": "DynamicalSystem2D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/dynamical_system.capnp",
+      "ClassName": "DynamicalSystem2D",
+      "PluginTypeName": "rpp_common::DynamicalSystem2D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DynamicalSystem2D.DynamicalSystem2D'>"
+    },
+    "rpp_common::DynamicalSystem3D": {
+      "Id": "rpp_common__dynamical_system3_d",
+      "Name": "DynamicalSystem3D",
+      "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/dynamical_system.capnp",
+      "ClassName": "DynamicalSystem3D",
+      "PluginTypeName": "rpp_common::DynamicalSystem3D",
+      "Library": "rpp_common",
+      "SourceLanguage": "capnp",
+      "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DynamicalSystem3D.DynamicalSystem3D'>"
+    }
+  }
+}

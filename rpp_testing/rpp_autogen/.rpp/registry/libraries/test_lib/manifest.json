@@ -1,0 +1,73 @@
+{
+    "Library": "test_lib",
+    "Plugins": {
+        "test_lib::ComponentPluginComplexPy": {
+            "Name": "ComponentPluginComplexPy",
+            "PluginName": "test_lib::ComponentPluginComplexPy",
+            "PluginType": "rpp_testing::MotionController2D",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_plugin_complex_py.py",
+            "IsCasadi": false,
+            "SourceLanguage": "python"
+        },
+        "test_lib::ComponentPluginSimplePy": {
+            "Name": "ComponentPluginSimplePy",
+            "PluginName": "test_lib::ComponentPluginSimplePy",
+            "PluginType": "rpp_testing::MotionController2D",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_plugin_simple_py.py",
+            "IsCasadi": false,
+            "SourceLanguage": "python"
+        },
+        "test_lib::AllInterfaceTypesCpp": {
+            "Name": "AllInterfaceTypesCpp",
+            "PluginName": "test_lib::AllInterfaceTypesCpp",
+            "PluginType": "rpp_testing::TestInterfaceAll",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_all_interface_types_cpp.cpp",
+            "IsCasadi": false,
+            "SourceLanguage": "cpp"
+        },
+        "test_lib::DataInterfaceCpp": {
+            "Name": "DataInterfaceCpp",
+            "PluginName": "test_lib::DataInterfaceCpp",
+            "PluginType": "rpp_testing::DisturbanceGenerator2D",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_data_interface_cpp.cpp",
+            "IsCasadi": false,
+            "SourceLanguage": "cpp"
+        },
+        "test_lib::ComponentPluginSimpleCpp": {
+            "Name": "ComponentPluginSimpleCpp",
+            "PluginName": "test_lib::ComponentPluginSimpleCpp",
+            "PluginType": "rpp_testing::MotionController2D",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_plugin_simple_cpp.cpp",
+            "IsCasadi": false,
+            "SourceLanguage": "cpp"
+        },
+        "test_lib::ComponentPluginComplexCpp": {
+            "Name": "ComponentPluginComplexCpp",
+            "PluginName": "test_lib::ComponentPluginComplexCpp",
+            "PluginType": "rpp_testing::MotionController2D",
+            "PluginTypeLibrary": "rpp_testing",
+            "Library": "test_lib",
+            "Description": "No description provided.",
+            "SourceFile": "plugins/example_plugin_complex_cpp.cpp",
+            "IsCasadi": false,
+            "SourceLanguage": "cpp"
+        }
+    },
+    "PluginTypes": {},
+    "Version": "0.0.1"
+}

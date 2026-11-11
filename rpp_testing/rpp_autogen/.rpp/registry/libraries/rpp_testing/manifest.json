@@ -1,0 +1,79 @@
+{
+    "Library": "rpp_testing",
+    "Plugins": {},
+    "PluginTypes": {
+        "rpp_testing::DisturbanceGenerator2D": {
+            "Name": "DisturbanceGenerator2D",
+            "PluginTypeName": "rpp_testing::DisturbanceGenerator2D",
+            "Library": "rpp_testing",
+            "ClassName": "DisturbanceGenerator2D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.DisturbanceGenerator2D.DisturbanceGenerator2D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_testing/test_plugin_types.capnp"
+        },
+        "rpp_testing::MotionController2D": {
+            "Name": "MotionController2D",
+            "PluginTypeName": "rpp_testing::MotionController2D",
+            "Library": "rpp_testing",
+            "ClassName": "MotionController2D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_testing/test_plugin_types.capnp"
+        },
+        "rpp_testing::TestInterfaceAll": {
+            "Name": "test",
+            "PluginTypeName": "rpp_testing::TestInterfaceAll",
+            "Library": "rpp_testing",
+            "ClassName": "TestInterfaceAll",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.TestInterfaceAll.TestInterfaceAll'>",
+            "RegistryPluginTypeFile": "capnp/rpp_testing/test_plugin_types.capnp"
+        },
+        "rpp_common::Estimator2D": {
+            "Name": "Estimator2D",
+            "PluginTypeName": "rpp_common::Estimator2D",
+            "Library": "rpp_common",
+            "ClassName": "Estimator2D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator2D.Estimator2D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/estimator.capnp"
+        },
+        "rpp_common::Estimator3D": {
+            "Name": "Estimator3D",
+            "PluginTypeName": "rpp_common::Estimator3D",
+            "Library": "rpp_common",
+            "ClassName": "Estimator3D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator3D.Estimator3D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/estimator.capnp"
+        },
+        "rpp_common::DisturbanceGenerator2D": {
+            "Name": "DisturbanceGenerator2D",
+            "PluginTypeName": "rpp_common::DisturbanceGenerator2D",
+            "Library": "rpp_common",
+            "ClassName": "DisturbanceGenerator2D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator2D.DisturbanceGenerator2D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/disturbance_generator.capnp"
+        },
+        "rpp_common::DisturbanceGenerator3D": {
+            "Name": "DisturbanceGenerator3D",
+            "PluginTypeName": "rpp_common::DisturbanceGenerator3D",
+            "Library": "rpp_common",
+            "ClassName": "DisturbanceGenerator3D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator3D.DisturbanceGenerator3D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/disturbance_generator.capnp"
+        },
+        "rpp_common::DynamicalSystem2D": {
+            "Name": "DynamicalSystem2D",
+            "PluginTypeName": "rpp_common::DynamicalSystem2D",
+            "Library": "rpp_common",
+            "ClassName": "DynamicalSystem2D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DynamicalSystem2D.DynamicalSystem2D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/dynamical_system.capnp"
+        },
+        "rpp_common::DynamicalSystem3D": {
+            "Name": "DynamicalSystem3D",
+            "PluginTypeName": "rpp_common::DynamicalSystem3D",
+            "Library": "rpp_common",
+            "ClassName": "DynamicalSystem3D",
+            "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DynamicalSystem3D.DynamicalSystem3D'>",
+            "RegistryPluginTypeFile": "capnp/rpp_common/dynamical_system.capnp"
+        }
+    },
+    "Version": "0.0.1"
+}

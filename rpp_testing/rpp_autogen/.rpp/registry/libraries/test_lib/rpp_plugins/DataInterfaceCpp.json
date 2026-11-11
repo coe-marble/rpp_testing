@@ -1,0 +1,22 @@
+{
+  "Name": "DataInterfaceCpp",
+  "PluginName": "test_lib::DataInterfaceCpp",
+  "Library": "test_lib",
+  "Description": "No description provided.",
+  "SourceFile": "plugins/example_data_interface_cpp.cpp",
+  "IsCasadi": false,
+  "SourceLanguage": "cpp",
+  "PluginType": "rpp_testing::DisturbanceGenerator2D",
+  "PluginTypeClassName": "DisturbanceGenerator2D",
+  "FullyQualifiedPluginClassName": "<class 'rpp_plugin_types.rpp_testing.DisturbanceGenerator2D.DisturbanceGenerator2D'>",
+  "FullyQualifiedClassName": "rpp_testing::DisturbanceGenerator2D",
+  "ClassName": "DataInterfaceCpp",
+  "PluginTypeLibrary": "rpp_testing",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginSharedLibraryPath": "cpp/shared/test_lib/plugins/DataInterfaceCpp.so",
+  "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/DisturbanceGenerator2D.so",
+  "PluginMetadata": {
+    "Parameters": {},
+    "Components": {}
+  }
+}

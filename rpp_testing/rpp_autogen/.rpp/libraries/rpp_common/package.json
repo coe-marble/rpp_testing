@@ -1,0 +1,8 @@
+{
+  "Library": "rpp_common",
+  "Id": "16e38eb2-1e9f-4e96-b4e1-c211ea048c6a",
+  "Version": "0.0.1",
+  "Dependencies": [],
+  "RosDependencies": [],
+  "Install": []
+}

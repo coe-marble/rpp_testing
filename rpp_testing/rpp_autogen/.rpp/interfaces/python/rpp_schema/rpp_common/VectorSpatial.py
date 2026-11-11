@@ -1,0 +1,23 @@
+
+from typing import List, Dict, Any, Tuple
+from pydantic import (
+    BaseModel, ConfigDict, RootModel,
+    ValidationError, Field
+)
+from pydantic.dataclasses import dataclass
+from typing import List, Dict, Any, Tuple
+
+@dataclass(config=ConfigDict(extra="forbid", validate_assignment=True))
+class VectorSpatial:
+
+    def as_dict(self) -> Dict[str, Any]:
+
+        return RootModel(self).model_dump()
+
+    x: float = 0.0
+    y: float = 0.0
+    z: float = 0.0
+    roll: float = 0.0
+    pitch: float = 0.0
+    yaw: float = 0.0
+    

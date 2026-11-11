@@ -1,0 +1,66 @@
+{
+  "Name": "Estimator3D",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/estimator.capnp",
+  "ClassName": "Estimator3D",
+  "SourceLanguage": "capnp",
+  "Methods": [
+    {
+      "Name": "step",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        },
+        {
+          "Name": "dt",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "estimated_state",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "validate",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "ok",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    }
+  ],
+  "Library": "rpp_common",
+  "PluginTypeName": "rpp_common::Estimator3D",
+  "Id": "rpp_common__estimator3_d",
+  "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator3D.Estimator3D'>",
+  "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_common/estimator.capnp",
+  "RegistryPluginTypeFileId": "dc068c96e8d1f566"
+}

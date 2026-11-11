@@ -1,0 +1,36 @@
+{
+    "Library": "test_lib",
+    "Plugins": [
+        {
+            "Name": "ComponentPluginComplexPy",
+            "Path": "plugins/example_plugin_complex_py.py",
+            "Type": "file"
+        },
+        {
+            "Name": "ComponentPluginSimplePy",
+            "Path": "plugins/example_plugin_simple_py.py",
+            "Type": "file"
+        },
+        {
+            "Name": "AllInterfaceTypesCpp",
+            "Path": "plugins/example_all_interface_types_cpp.cpp",
+            "Type": "file"
+        },
+        {
+            "Name": "DataInterfaceCpp",
+            "Path": "plugins/example_data_interface_cpp.cpp",
+            "Type": "file"
+        },
+        {
+            "Name": "ComponentPluginSimpleCpp",
+            "Path": "plugins/example_plugin_simple_cpp.cpp",
+            "Type": "file"
+        },
+        {
+            "Name": "ComponentPluginComplexCpp",
+            "Path": "plugins/example_plugin_complex_cpp.cpp",
+            "Type": "file"
+        }
+    ],
+    "PluginTypes": []
+}

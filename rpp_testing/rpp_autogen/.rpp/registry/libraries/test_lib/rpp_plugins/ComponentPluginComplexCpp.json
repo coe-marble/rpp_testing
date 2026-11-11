@@ -1,0 +1,116 @@
+{
+  "Name": "ComponentPluginComplexCpp",
+  "PluginName": "test_lib::ComponentPluginComplexCpp",
+  "Library": "test_lib",
+  "Description": "No description provided.",
+  "SourceFile": "plugins/example_plugin_complex_cpp.cpp",
+  "IsCasadi": false,
+  "SourceLanguage": "cpp",
+  "PluginType": "rpp_testing::MotionController2D",
+  "PluginTypeClassName": "MotionController2D",
+  "FullyQualifiedPluginClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
+  "FullyQualifiedClassName": "rpp_testing::MotionController2D",
+  "ClassName": "ComponentPluginComplexCpp",
+  "PluginTypeLibrary": "rpp_testing",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginSharedLibraryPath": "cpp/shared/test_lib/plugins/ComponentPluginComplexCpp.so",
+  "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/MotionController2D.so",
+  "PluginMetadata": {
+    "Parameters": {
+      "int_var": {
+        "name": "int_var",
+        "type": "int",
+        "default_value": 1
+      },
+      "float_var": {
+        "name": "float_var",
+        "type": "float",
+        "default_value": 5.0
+      },
+      "str_var": {
+        "name": "str_var",
+        "type": "string",
+        "default_value": "test"
+      },
+      "struct1_var": {
+        "name": "struct1_var",
+        "type": "object",
+        "fields": {
+          "fps": {
+            "name": "fps",
+            "type": "float",
+            "default_value": 30.0
+          },
+          "height": {
+            "name": "height",
+            "type": "string",
+            "default_value": "480"
+          },
+          "width": {
+            "name": "width",
+            "type": "int",
+            "default_value": 640
+          }
+        }
+      },
+      "struct2_var": {
+        "name": "struct2_var",
+        "type": "object",
+        "fields": {
+          "struct1": {
+            "name": "struct1",
+            "type": "object",
+            "fields": {
+              "fps": {
+                "name": "fps",
+                "type": "float",
+                "default_value": 30.0
+              },
+              "height": {
+                "name": "height",
+                "type": "string",
+                "default_value": "480"
+              },
+              "width": {
+                "name": "width",
+                "type": "int",
+                "default_value": 640
+              }
+            }
+          },
+          "values": {
+            "name": "values",
+            "type": "array",
+            "element_type": "int",
+            "elements": [
+              {
+                "name": "0",
+                "type": "int",
+                "default_value": 1
+              },
+              {
+                "name": "1",
+                "type": "int",
+                "default_value": 2
+              },
+              {
+                "name": "2",
+                "type": "int",
+                "default_value": 3
+              }
+            ]
+          }
+        }
+      },
+      "validate_subcomponent": {
+        "name": "validate_subcomponent",
+        "type": "bool",
+        "default_value": false
+      }
+    },
+    "Components": {
+      "ctl_1": "rpp_testing::MotionController2D",
+      "ctl_2": "rpp_testing::DisturbanceController2D"
+    }
+  }
+}

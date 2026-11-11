@@ -1,0 +1,66 @@
+{
+  "Name": "DisturbanceGenerator3D",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_common/disturbance_generator.capnp",
+  "ClassName": "DisturbanceGenerator3D",
+  "SourceLanguage": "capnp",
+  "Methods": [
+    {
+      "Name": "step",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        },
+        {
+          "Name": "dt",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "state_disturbed",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "validate",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Pose3D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Pose3D"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "ok",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    }
+  ],
+  "Library": "rpp_common",
+  "PluginTypeName": "rpp_common::DisturbanceGenerator3D",
+  "Id": "rpp_common__disturbance_generator3_d",
+  "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.DisturbanceGenerator3D.DisturbanceGenerator3D'>",
+  "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_common/disturbance_generator.capnp",
+  "RegistryPluginTypeFileId": "c56d8bcca7bfaf21"
+}

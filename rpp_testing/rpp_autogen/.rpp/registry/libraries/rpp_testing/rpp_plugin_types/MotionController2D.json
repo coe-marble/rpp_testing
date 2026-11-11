@@ -1,0 +1,66 @@
+{
+  "Name": "MotionController2D",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "ClassName": "MotionController2D",
+  "SourceLanguage": "capnp",
+  "Methods": [
+    {
+      "Name": "step",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Odometry2D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Odometry2D"
+          }
+        },
+        {
+          "Name": "dt",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "command",
+          "Type": {
+            "Name": "VectorPlanar",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:VectorPlanar"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "validate",
+      "Params": [
+        {
+          "Name": "state",
+          "Type": {
+            "Name": "Odometry2D",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "rpp_common/msgs.capnp:Odometry2D"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "ok",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    }
+  ],
+  "Library": "rpp_testing",
+  "PluginTypeName": "rpp_testing::MotionController2D",
+  "Id": "rpp_testing__motion_controller2_d",
+  "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
+  "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_testing/test_plugin_types.capnp",
+  "RegistryPluginTypeFileId": "d1592c8e6b637174"
+}

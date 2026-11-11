@@ -1,0 +1,221 @@
+{
+  "Name": "test",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "ClassName": "TestInterfaceAll",
+  "SourceLanguage": "capnp",
+  "Methods": [
+    {
+      "Name": "funcEmpty",
+      "Params": [],
+      "Results": []
+    },
+    {
+      "Name": "funcWithSimpleParams",
+      "Params": [
+        {
+          "Name": "paramFloat",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        },
+        {
+          "Name": "paramBool",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "resultFloat",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithStructParam",
+      "Params": [
+        {
+          "Name": "paramStruct1",
+          "Type": {
+            "Name": "TestStruct1",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+          }
+        },
+        {
+          "Name": "paramStruct2",
+          "Type": {
+            "Name": "TestStruct2",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct2"
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "resultStruct1",
+          "Type": {
+            "Name": "TestStruct1",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithListParam",
+      "Params": [
+        {
+          "Name": "paramListFloat",
+          "Type": {
+            "Name": null,
+            "Kind": "list",
+            "ElementType": {
+              "Name": "float64",
+              "Kind": "primitive"
+            }
+          }
+        },
+        {
+          "Name": "paramListStruct",
+          "Type": {
+            "Name": "paramListStruct",
+            "Kind": "list",
+            "ElementType": {
+              "Name": "TestStruct1",
+              "Kind": "struct",
+              "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+            }
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "resultList",
+          "Type": {
+            "Name": null,
+            "Kind": "list",
+            "ElementType": {
+              "Name": "float64",
+              "Kind": "primitive"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithListOfStructParam",
+      "Params": [
+        {
+          "Name": "paramListStruct",
+          "Type": {
+            "Name": "paramListStruct",
+            "Kind": "list",
+            "ElementType": {
+              "Name": "TestStruct1",
+              "Kind": "struct",
+              "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+            }
+          }
+        }
+      ],
+      "Results": [
+        {
+          "Name": "resultListStruct2",
+          "Type": {
+            "Name": "resultListStruct2",
+            "Kind": "list",
+            "ElementType": {
+              "Name": "TestStruct2",
+              "Kind": "struct",
+              "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct2"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithMultipleSimpleReturns",
+      "Params": [],
+      "Results": [
+        {
+          "Name": "resultFloat",
+          "Type": {
+            "Name": "float64",
+            "Kind": "primitive"
+          }
+        },
+        {
+          "Name": "resultBool",
+          "Type": {
+            "Name": "bool",
+            "Kind": "primitive"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithMultipleStructReturns",
+      "Params": [],
+      "Results": [
+        {
+          "Name": "resultStruct1",
+          "Type": {
+            "Name": "TestStruct1",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+          }
+        },
+        {
+          "Name": "resultStruct2",
+          "Type": {
+            "Name": "TestStruct2",
+            "Kind": "struct",
+            "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct2"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "funcWithMultipleListReturns",
+      "Params": [],
+      "Results": [
+        {
+          "Name": "resultListFloat",
+          "Type": {
+            "Name": null,
+            "Kind": "list",
+            "ElementType": {
+              "Name": "float64",
+              "Kind": "primitive"
+            }
+          }
+        },
+        {
+          "Name": "resultListStruct",
+          "Type": {
+            "Name": "resultListStruct",
+            "Kind": "list",
+            "ElementType": {
+              "Name": "TestStruct1",
+              "Kind": "struct",
+              "CapnpTypeDisplayName": "test_plugin_types.capnp:TestStruct1"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "Library": "rpp_testing",
+  "PluginTypeName": "rpp_testing::TestInterfaceAll",
+  "Id": "rpp_testing__test_interface_all",
+  "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.TestInterfaceAll.TestInterfaceAll'>",
+  "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_testing/test_plugin_types.capnp",
+  "RegistryPluginTypeFileId": "d1592c8e6b637174"
+}

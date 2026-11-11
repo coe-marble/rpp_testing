@@ -16,7 +16,7 @@ integration = ["rpp-cli>=0.1,<0.2", "rpp-py>=0.1,<0.2"]
 include-package-data = true
 
 [tool.setuptools.package-data]
-rpp_testing = ["data/**"]
+rpp_testing = ["data/**", "rpp_autogen/**", "rpp_autogen/.rpp/**"]
 
 [tool.setuptools.packages.find]
 include = ["rpp_testing", "rpp_testing.*"]

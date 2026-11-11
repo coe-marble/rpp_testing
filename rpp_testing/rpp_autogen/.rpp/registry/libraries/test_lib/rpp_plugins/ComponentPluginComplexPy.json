@@ -1,0 +1,105 @@
+{
+  "Name": "ComponentPluginComplexPy",
+  "PluginName": "test_lib::ComponentPluginComplexPy",
+  "Library": "test_lib",
+  "Description": "No description provided.",
+  "SourceFile": "plugins/example_plugin_complex_py.py",
+  "IsCasadi": false,
+  "SourceLanguage": "python",
+  "PluginType": "rpp_testing::MotionController2D",
+  "PluginTypeClassName": "MotionController2D",
+  "FullyQualifiedPluginClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
+  "FullyQualifiedClassName": "<class '_rpp_plugin_98c034da0eb36409.example_plugin_complex_py.ComponentPluginComplexPy'>",
+  "ClassName": "ComponentPluginComplexPy",
+  "PluginTypeLibrary": "rpp_testing",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginSharedLibraryPath": null,
+  "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/MotionController2D.so",
+  "PluginMetadata": {
+    "Parameters": {
+      "param1": {
+        "name": "param1",
+        "default_value": 1.1,
+        "type": "float"
+      },
+      "param2": {
+        "name": "param2",
+        "default_value": 2,
+        "type": "int"
+      },
+      "param3": {
+        "name": "param3",
+        "default_value": "default_string",
+        "type": "string"
+      },
+      "param4": {
+        "name": "param4",
+        "default_value": true,
+        "type": "bool"
+      },
+      "param5": {
+        "name": "param5",
+        "default_value": [
+          {
+            "name": "param5[0]",
+            "default_value": 1,
+            "type": "int"
+          },
+          {
+            "name": "param5[1]",
+            "default_value": 2,
+            "type": "int"
+          },
+          {
+            "name": "param5[2]",
+            "default_value": 3,
+            "type": "int"
+          }
+        ],
+        "type": "array",
+        "element_type": "int"
+      },
+      "param6": {
+        "name": "param6",
+        "type": "object",
+        "fields": {
+          "key1": {
+            "name": "key1",
+            "default_value": "value1",
+            "type": "string"
+          },
+          "key2": {
+            "name": "key2",
+            "default_value": 2,
+            "type": "int"
+          }
+        }
+      },
+      "param7": {
+        "name": "param7",
+        "type": "object",
+        "fields": {
+          "a": {
+            "name": "a",
+            "default_value": 10,
+            "type": "int"
+          },
+          "b": {
+            "name": "b",
+            "default_value": 2,
+            "type": "int"
+          }
+        }
+      },
+      "validate_subcomponent": {
+        "name": "validate_subcomponent",
+        "default_value": false,
+        "type": "bool"
+      }
+    },
+    "Components": {
+      "ctl_main": "rpp_testing::MotionController2D",
+      "ctl_disturbance": "rpp_testing::DisturbanceGenerator2D"
+    }
+  }
+}

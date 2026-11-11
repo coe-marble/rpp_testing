@@ -1,0 +1,8 @@
+{
+  "Library": "rpp_testing",
+  "Id": "12e06d1b-316d-4f13-8c3f-7d3e6ed1f12d",
+  "Version": "0.0.1",
+  "Dependencies": [],
+  "RosDependencies": [],
+  "Install": []
+}

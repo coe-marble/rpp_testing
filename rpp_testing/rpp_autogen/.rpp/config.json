@@ -1,0 +1,4 @@
+{
+    "RPP_CPP_CORE_PATH": "/workspaces/rpp/ros2_ws/build/rpp_cpp",
+    "USE_ROS2_COMPILATION": true
+}
