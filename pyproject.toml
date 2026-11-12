@@ -4,16 +4,19 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rpp_testing"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Packaged fixture data for RPP tests"
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<9"]
-integration = ["rpp-cli>=0.1,<0.2", "rpp-py>=0.1,<0.2"]
+integration = ["rpp-cli>=0.2,<0.3", "rpp-py>=0.2,<0.3"]
 
 [tool.setuptools]
 include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "rpp_testing.__version__"}
 
 [tool.setuptools.package-data]
 rpp_testing = ["data/**", "rpp_autogen/**", "rpp_autogen/.rpp/**"]
