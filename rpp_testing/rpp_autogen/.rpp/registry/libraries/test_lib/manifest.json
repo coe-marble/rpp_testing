@@ -32,7 +32,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_all_interface_types_cpp.cpp",
             "IsCasadi": false,
-            "SourceLanguage": "cpp"
+            "SourceLanguage": "cpp",
+            "BuildType": "RelWithDebInfo"
         },
         "test_lib::DataInterfaceCpp": {
             "Name": "DataInterfaceCpp",
@@ -43,7 +44,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_data_interface_cpp.cpp",
             "IsCasadi": false,
-            "SourceLanguage": "cpp"
+            "SourceLanguage": "cpp",
+            "BuildType": "RelWithDebInfo"
         },
         "test_lib::ComponentPluginSimpleCpp": {
             "Name": "ComponentPluginSimpleCpp",
@@ -54,7 +56,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_plugin_simple_cpp.cpp",
             "IsCasadi": false,
-            "SourceLanguage": "cpp"
+            "SourceLanguage": "cpp",
+            "BuildType": "RelWithDebInfo"
         },
         "test_lib::ComponentPluginComplexCpp": {
             "Name": "ComponentPluginComplexCpp",
@@ -65,7 +68,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_plugin_complex_cpp.cpp",
             "IsCasadi": false,
-            "SourceLanguage": "cpp"
+            "SourceLanguage": "cpp",
+            "BuildType": "RelWithDebInfo"
         }
     },
     "PluginTypes": {},

@@ -16,8 +16,8 @@ namespace rpp_schema::rpp_common{
 
 struct Pose3D_Native {
 
-    Point3D_Native position;
-    Quaternion_Native orientation;
+    ::rpp_schema::rpp_common::Point3D_Native position;
+    ::rpp_schema::rpp_common::Quaternion_Native orientation;
 };
 
 
@@ -30,9 +30,11 @@ public:
         private:
             schema::rpp_common::Pose3D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Pose3D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Pose3D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Pose3D& main_wrapper);
             Const(Pose3D&& main_wrapper)
@@ -41,12 +43,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -56,7 +60,7 @@ public:
 
             operator schema::rpp_common::Pose3D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Pose3D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -69,17 +73,17 @@ public:
             }
         using List = rpp::ListConst<Pose3D>;
 
-            inline Point3D::Const position() const { return Point3D::Const(reader_.getPosition()); }
+            inline ::rpp_schema::rpp_common::Point3D::Const position() const { return ::rpp_schema::rpp_common::Point3D::Const(reader_.getPosition(), message_lifetime_); }
 
 
-            inline Quaternion::Const orientation() const { return Quaternion::Const(reader_.getOrientation()); }
+            inline ::rpp_schema::rpp_common::Quaternion::Const orientation() const { return ::rpp_schema::rpp_common::Quaternion::Const(reader_.getOrientation(), message_lifetime_); }
 
 
             Pose3D_Native as_struct() const {
 
                 return Pose3D_Native{
-                    Point3D::Const(reader_.getPosition()).as_struct(),
-                    Quaternion::Const(reader_.getOrientation()).as_struct()
+                    ::rpp_schema::rpp_common::Point3D::Const(reader_.getPosition()).as_struct(),
+                    ::rpp_schema::rpp_common::Quaternion::Const(reader_.getOrientation()).as_struct()
                 };
             }
     };
@@ -111,17 +115,17 @@ public:
         Pose3D(const Pose3D&) = delete;
         Pose3D& operator=(const Pose3D&) = delete;
 
-        Point3D position() { return Point3D(builder_.getPosition()); }
-        Point3D::Const position() const { return Point3D::Const(builder_.asReader().getPosition()); }
+        ::rpp_schema::rpp_common::Point3D position() { return ::rpp_schema::rpp_common::Point3D(builder_.getPosition()); }
+        ::rpp_schema::rpp_common::Point3D::Const position() const { return ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getPosition()); }
 
-        Quaternion orientation() { return Quaternion(builder_.getOrientation()); }
-        Quaternion::Const orientation() const { return Quaternion::Const(builder_.asReader().getOrientation()); }
+        ::rpp_schema::rpp_common::Quaternion orientation() { return ::rpp_schema::rpp_common::Quaternion(builder_.getOrientation()); }
+        ::rpp_schema::rpp_common::Quaternion::Const orientation() const { return ::rpp_schema::rpp_common::Quaternion::Const(builder_.asReader().getOrientation()); }
 
         Pose3D_Native as_struct() const {
 
             return Pose3D_Native{
-                Point3D::Const(builder_.asReader().getPosition()).as_struct(),
-                Quaternion::Const(builder_.asReader().getOrientation()).as_struct()
+                ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getPosition()).as_struct(),
+                ::rpp_schema::rpp_common::Quaternion::Const(builder_.asReader().getOrientation()).as_struct()
             };
         }
 

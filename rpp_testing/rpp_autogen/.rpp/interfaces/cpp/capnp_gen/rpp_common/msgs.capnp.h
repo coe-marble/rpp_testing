@@ -18,23 +18,24 @@ CAPNP_BEGIN_HEADER
 namespace capnp {
 namespace schemas {
 
-CAPNP_DECLARE_SCHEMA(f01a9bc993d5c670);
-CAPNP_DECLARE_SCHEMA(be183a3ef290d2f0);
-CAPNP_DECLARE_SCHEMA(9d9e82ccadc9f9c9);
-CAPNP_DECLARE_SCHEMA(e59735b28506532e);
-CAPNP_DECLARE_SCHEMA(88e4d7305d887e01);
-CAPNP_DECLARE_SCHEMA(e11b6488f73918e8);
-CAPNP_DECLARE_SCHEMA(99cfbde92fc604e2);
-CAPNP_DECLARE_SCHEMA(f720c05017156a86);
-CAPNP_DECLARE_SCHEMA(cee91b1fd98e0616);
-CAPNP_DECLARE_SCHEMA(c11eb754aa129f4b);
-CAPNP_DECLARE_SCHEMA(f8c71d7534aa49cb);
-CAPNP_DECLARE_SCHEMA(a807842ce28e590b);
-CAPNP_DECLARE_SCHEMA(e76edf29e297f023);
-CAPNP_DECLARE_SCHEMA(a68d32fc002e1711);
-CAPNP_DECLARE_SCHEMA(d87d195685d155d4);
-CAPNP_DECLARE_SCHEMA(f547dae59eb844b0);
-CAPNP_DECLARE_SCHEMA(eaa5f1d5e82303e4);
+CAPNP_DECLARE_SCHEMA(a2bdf848ead3d6d3);
+CAPNP_DECLARE_SCHEMA(acad29a5df2c7bcb);
+CAPNP_DECLARE_SCHEMA(a5003aa9355768ea);
+CAPNP_DECLARE_SCHEMA(b3eeb54a307b293a);
+CAPNP_DECLARE_SCHEMA(c3ea9be9fa13346b);
+CAPNP_DECLARE_SCHEMA(bf45213eeef455fd);
+CAPNP_DECLARE_SCHEMA(90d1fee214b3fec4);
+CAPNP_DECLARE_SCHEMA(9306bb1397a678ac);
+CAPNP_DECLARE_SCHEMA(8f74e3de0f81ab45);
+CAPNP_DECLARE_SCHEMA(b2f55beae4e564a0);
+CAPNP_DECLARE_SCHEMA(b7d684458a65811c);
+CAPNP_DECLARE_SCHEMA(b6f93ba1aa4de75b);
+CAPNP_DECLARE_SCHEMA(ca9114d5f8791a0e);
+CAPNP_DECLARE_SCHEMA(de16970c9f7b393f);
+CAPNP_DECLARE_SCHEMA(d952952b9e0bd5ba);
+CAPNP_DECLARE_SCHEMA(f80fd0e549c14354);
+CAPNP_DECLARE_SCHEMA(9729389c1c00f5e0);
+CAPNP_DECLARE_SCHEMA(b8cbf0046755752c);
 
 }  // namespace schemas
 }  // namespace capnp
@@ -50,7 +51,7 @@ struct Point2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f01a9bc993d5c670, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(a2bdf848ead3d6d3, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -65,7 +66,7 @@ struct Point3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(be183a3ef290d2f0, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(acad29a5df2c7bcb, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -80,7 +81,7 @@ struct Quaternion {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9d9e82ccadc9f9c9, 4, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(a5003aa9355768ea, 4, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -95,7 +96,7 @@ struct Pose2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e59735b28506532e, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b3eeb54a307b293a, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -110,7 +111,7 @@ struct Pose3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(88e4d7305d887e01, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(c3ea9be9fa13346b, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -125,7 +126,7 @@ struct Twist2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e11b6488f73918e8, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(bf45213eeef455fd, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -140,7 +141,7 @@ struct Twist3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(99cfbde92fc604e2, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(90d1fee214b3fec4, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -155,7 +156,7 @@ struct Wrench2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f720c05017156a86, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(9306bb1397a678ac, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -170,7 +171,7 @@ struct Wrench3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(cee91b1fd98e0616, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(8f74e3de0f81ab45, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -185,7 +186,7 @@ struct Odometry2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(c11eb754aa129f4b, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(b2f55beae4e564a0, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -200,7 +201,7 @@ struct Odometry3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f8c71d7534aa49cb, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(b7d684458a65811c, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -215,7 +216,22 @@ struct Command {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a807842ce28e590b, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b6f93ba1aa4de75b, 0, 1)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct FloatMatrix {
+  FloatMatrix() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(ca9114d5f8791a0e, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -230,7 +246,7 @@ struct VectorPlanar {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e76edf29e297f023, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(de16970c9f7b393f, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -245,7 +261,7 @@ struct VectorSpatial {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a68d32fc002e1711, 6, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(d952952b9e0bd5ba, 6, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -260,7 +276,7 @@ struct Vector3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(d87d195685d155d4, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(f80fd0e549c14354, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -275,7 +291,7 @@ struct Path2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f547dae59eb844b0, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(9729389c1c00f5e0, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -290,7 +306,7 @@ struct Path3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(eaa5f1d5e82303e4, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b8cbf0046755752c, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -1352,6 +1368,98 @@ private:
 class Command::Pipeline {
 public:
   typedef Command Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class FloatMatrix::Reader {
+public:
+  typedef FloatMatrix Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
+  }
+#endif  // !CAPNP_LITE
+
+  inline  ::uint32_t getRows() const;
+
+  inline  ::uint32_t getColumns() const;
+
+  inline bool hasValues() const;
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader getValues() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class FloatMatrix::Builder {
+public:
+  typedef FloatMatrix Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline  ::uint32_t getRows();
+  inline void setRows( ::uint32_t value);
+
+  inline  ::uint32_t getColumns();
+  inline void setColumns( ::uint32_t value);
+
+  inline bool hasValues();
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder getValues();
+  inline void setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value);
+  inline void setValues(::kj::ArrayPtr<const double> value);
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder initValues(unsigned int size);
+  inline void adoptValues(::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value);
+  inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> disownValues();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class FloatMatrix::Pipeline {
+public:
+  typedef FloatMatrix Pipelines;
 
   inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
   inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
@@ -2511,6 +2619,72 @@ inline void Command::Builder::adoptData(
       ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
 }
 inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> Command::Builder::disownData() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+
+inline  ::uint32_t FloatMatrix::Reader::getRows() const {
+  return _reader.getDataField< ::uint32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+
+inline  ::uint32_t FloatMatrix::Builder::getRows() {
+  return _builder.getDataField< ::uint32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+inline void FloatMatrix::Builder::setRows( ::uint32_t value) {
+  _builder.setDataField< ::uint32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS, value);
+}
+
+inline  ::uint32_t FloatMatrix::Reader::getColumns() const {
+  return _reader.getDataField< ::uint32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+
+inline  ::uint32_t FloatMatrix::Builder::getColumns() {
+  return _builder.getDataField< ::uint32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+inline void FloatMatrix::Builder::setColumns( ::uint32_t value) {
+  _builder.setDataField< ::uint32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS, value);
+}
+
+inline bool FloatMatrix::Reader::hasValues() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline bool FloatMatrix::Builder::hasValues() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader FloatMatrix::Reader::getValues() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder FloatMatrix::Builder::getValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline void FloatMatrix::Builder::setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline void FloatMatrix::Builder::setValues(::kj::ArrayPtr<const double> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder FloatMatrix::Builder::initValues(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::init(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), size);
+}
+inline void FloatMatrix::Builder::adoptValues(
+    ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> FloatMatrix::Builder::disownValues() {
   return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
       ::capnp::bounded<0>() * ::capnp::POINTERS));
 }

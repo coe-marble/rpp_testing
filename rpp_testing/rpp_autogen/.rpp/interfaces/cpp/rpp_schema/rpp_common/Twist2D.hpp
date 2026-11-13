@@ -15,7 +15,7 @@ namespace rpp_schema::rpp_common{
 
 struct Twist2D_Native {
 
-    Point2D_Native linear;
+    ::rpp_schema::rpp_common::Point2D_Native linear;
     double angular;
 };
 
@@ -29,9 +29,11 @@ public:
         private:
             schema::rpp_common::Twist2D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Twist2D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Twist2D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Twist2D& main_wrapper);
             Const(Twist2D&& main_wrapper)
@@ -40,12 +42,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -55,7 +59,7 @@ public:
 
             operator schema::rpp_common::Twist2D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Twist2D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -68,7 +72,7 @@ public:
             }
         using List = rpp::ListConst<Twist2D>;
 
-            inline Point2D::Const linear() const { return Point2D::Const(reader_.getLinear()); }
+            inline ::rpp_schema::rpp_common::Point2D::Const linear() const { return ::rpp_schema::rpp_common::Point2D::Const(reader_.getLinear(), message_lifetime_); }
 
 
             inline double angular() const { return reader_.getAngular(); }
@@ -77,7 +81,7 @@ public:
             Twist2D_Native as_struct() const {
 
                 return Twist2D_Native{
-                    Point2D::Const(reader_.getLinear()).as_struct(),
+                    ::rpp_schema::rpp_common::Point2D::Const(reader_.getLinear()).as_struct(),
                     reader_.getAngular()
                 };
             }
@@ -122,8 +126,8 @@ public:
         Twist2D(const Twist2D&) = delete;
         Twist2D& operator=(const Twist2D&) = delete;
 
-        Point2D linear() { return Point2D(builder_.getLinear()); }
-        Point2D::Const linear() const { return Point2D::Const(builder_.asReader().getLinear()); }
+        ::rpp_schema::rpp_common::Point2D linear() { return ::rpp_schema::rpp_common::Point2D(builder_.getLinear()); }
+        ::rpp_schema::rpp_common::Point2D::Const linear() const { return ::rpp_schema::rpp_common::Point2D::Const(builder_.asReader().getLinear()); }
 
         angular_Proxy angular() { return angular_Proxy{builder_}; }
         double angular() const { return builder_.asReader().getAngular(); }
@@ -131,7 +135,7 @@ public:
         Twist2D_Native as_struct() const {
 
             return Twist2D_Native{
-                Point2D::Const(builder_.asReader().getLinear()).as_struct(),
+                ::rpp_schema::rpp_common::Point2D::Const(builder_.asReader().getLinear()).as_struct(),
                 builder_.asReader().getAngular()
             };
         }

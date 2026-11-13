@@ -28,9 +28,11 @@ public:
         private:
             schema::rpp_common::Command::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Command::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Command::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Command& main_wrapper);
             Const(Command&& main_wrapper)
@@ -39,12 +41,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -54,7 +58,7 @@ public:
 
             operator schema::rpp_common::Command::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Command::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -67,7 +71,7 @@ public:
             }
         using List = rpp::ListConst<Command>;
 
-            inline rpp::ListConst<double> data() const { return rpp::ListConst<double>{reader_.getData()}; }
+            inline rpp::ListConst<double> data() const { return rpp::ListConst<double>{reader_.getData(), message_lifetime_}; }
 
 
             Command_Native as_struct() const {
@@ -114,8 +118,8 @@ public:
         Command& operator=(const Command&) = delete;
 
         rpp::List<double> data() { return rpp::List<double>{builder_.getData(),
-                [this](size_t new_size) {
-                    return builder_.initData(new_size);
+                [builder = builder_](size_t new_size) mutable {
+                    return builder.initData(new_size);
                 }
             };
         }

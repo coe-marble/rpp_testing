@@ -112,5 +112,6 @@
       "ctl_1": "rpp_testing::MotionController2D",
       "ctl_2": "rpp_testing::DisturbanceController2D"
     }
-  }
+  },
+  "BuildType": "RelWithDebInfo"
 }

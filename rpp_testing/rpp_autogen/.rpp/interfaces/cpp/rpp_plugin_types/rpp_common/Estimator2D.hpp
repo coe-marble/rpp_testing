@@ -39,5 +39,6 @@ public:
 
 }  // namespace
 
-#include "Estimator2D_Adapter_Client.hpp"
-#include "Estimator2D_Adapter_Server.hpp"
+// Include the adapter headers explicitly when constructing communication adapters.
+// Keeping their implementations separate prevents optimized native calls from
+// acquiring references to the schema RPC implementations.

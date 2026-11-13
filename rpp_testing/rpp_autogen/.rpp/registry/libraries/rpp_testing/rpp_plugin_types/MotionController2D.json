@@ -62,5 +62,5 @@
   "Id": "rpp_testing__motion_controller2_d",
   "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
   "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_testing/test_plugin_types.capnp",
-  "RegistryPluginTypeFileId": "d1592c8e6b637174"
+  "RegistryPluginTypeFileId": "a372834618a0bc4b"
 }

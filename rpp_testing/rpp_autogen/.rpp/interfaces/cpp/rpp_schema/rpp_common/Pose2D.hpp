@@ -15,7 +15,7 @@ namespace rpp_schema::rpp_common{
 
 struct Pose2D_Native {
 
-    Point2D_Native position;
+    ::rpp_schema::rpp_common::Point2D_Native position;
     double yaw;
 };
 
@@ -29,9 +29,11 @@ public:
         private:
             schema::rpp_common::Pose2D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Pose2D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Pose2D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Pose2D& main_wrapper);
             Const(Pose2D&& main_wrapper)
@@ -40,12 +42,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -55,7 +59,7 @@ public:
 
             operator schema::rpp_common::Pose2D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Pose2D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -68,7 +72,7 @@ public:
             }
         using List = rpp::ListConst<Pose2D>;
 
-            inline Point2D::Const position() const { return Point2D::Const(reader_.getPosition()); }
+            inline ::rpp_schema::rpp_common::Point2D::Const position() const { return ::rpp_schema::rpp_common::Point2D::Const(reader_.getPosition(), message_lifetime_); }
 
 
             inline double yaw() const { return reader_.getYaw(); }
@@ -77,7 +81,7 @@ public:
             Pose2D_Native as_struct() const {
 
                 return Pose2D_Native{
-                    Point2D::Const(reader_.getPosition()).as_struct(),
+                    ::rpp_schema::rpp_common::Point2D::Const(reader_.getPosition()).as_struct(),
                     reader_.getYaw()
                 };
             }
@@ -122,8 +126,8 @@ public:
         Pose2D(const Pose2D&) = delete;
         Pose2D& operator=(const Pose2D&) = delete;
 
-        Point2D position() { return Point2D(builder_.getPosition()); }
-        Point2D::Const position() const { return Point2D::Const(builder_.asReader().getPosition()); }
+        ::rpp_schema::rpp_common::Point2D position() { return ::rpp_schema::rpp_common::Point2D(builder_.getPosition()); }
+        ::rpp_schema::rpp_common::Point2D::Const position() const { return ::rpp_schema::rpp_common::Point2D::Const(builder_.asReader().getPosition()); }
 
         yaw_Proxy yaw() { return yaw_Proxy{builder_}; }
         double yaw() const { return builder_.asReader().getYaw(); }
@@ -131,7 +135,7 @@ public:
         Pose2D_Native as_struct() const {
 
             return Pose2D_Native{
-                Point2D::Const(builder_.asReader().getPosition()).as_struct(),
+                ::rpp_schema::rpp_common::Point2D::Const(builder_.asReader().getPosition()).as_struct(),
                 builder_.asReader().getYaw()
             };
         }

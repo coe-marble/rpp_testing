@@ -137,14 +137,23 @@ class MotionController2D_AdapterClient(MotionController2D):
 
         runtime_class = RuntimeConstants.get_capnp_schema().PluginRuntime
         self._runtime_client = self._runtime_client_context.get_client().cast_as(runtime_class)
-        capability = await self._runtime_client.getComponentCapability(
-            self._adapter_client_info.connection_name)
         interface_class = capnp_schema.get_client_class("rpp_testing::MotionController2D", "test_plugin_types.capnp")
-        # Cap'n Proto represents an ``AnyPointer`` capability result as a
-        # dynamic object reader. Convert that reader to the concrete
-        # interface first; ``cast_as()`` is only available once it is a
-        # capability client.
-        self._client = capability.pluginRef.as_interface(interface_class)
+        try:
+            capability = await self._runtime_client.getComponentCapability(
+                self._adapter_client_info.connection_name)
+            # Cap'n Proto represents an ``AnyPointer`` capability result as a
+            # dynamic object reader. Convert that reader to the concrete
+            # interface first; ``cast_as()`` is only available once it is a
+            # capability client.
+            self._client = capability.pluginRef.as_interface(interface_class)
+        except capnp.KjException:
+            # Standalone adapter servers expose the typed capability as their
+            # bootstrap interface; component hosts expose PluginRuntime.
+            self._logger.warning(
+                "Runtime capability request failed; using direct adapter client.")
+            self._runtime_client = None
+            self._client = self._runtime_client_context.get_client().cast_as(
+                interface_class)
         return True
 
     def disconnect_adapter_client__(self):

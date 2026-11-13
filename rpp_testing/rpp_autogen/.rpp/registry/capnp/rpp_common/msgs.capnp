@@ -1,4 +1,4 @@
-@0xababe803c12f9b97;
+@0xf7a5295e5db9c136;
 using Cxx = import "/capnp/c++.capnp";
 $Cxx.namespace("schema::rpp_common");
 
@@ -62,6 +62,14 @@ struct Odometry3D {
 
 struct Command {
     data @0 :List(Float64);
+}
+
+# Dense row-major matrix used for numeric component handover state. An empty
+# matrix has zero rows, zero columns, and no values.
+struct FloatMatrix {
+    rows @0 :UInt32;
+    columns @1 :UInt32;
+    values @2 :List(Float64);
 }
 
 struct VectorPlanar {

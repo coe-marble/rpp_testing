@@ -15,7 +15,7 @@ namespace rpp_schema::rpp_common{
 
 struct Path3D_Native {
 
-    std::vector<Point3D_Native> points;
+    std::vector<::rpp_schema::rpp_common::Point3D_Native> points;
 };
 
 
@@ -28,9 +28,11 @@ public:
         private:
             schema::rpp_common::Path3D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Path3D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Path3D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Path3D& main_wrapper);
             Const(Path3D&& main_wrapper)
@@ -39,12 +41,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -54,7 +58,7 @@ public:
 
             operator schema::rpp_common::Path3D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Path3D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -67,16 +71,16 @@ public:
             }
         using List = rpp::ListConst<Path3D>;
 
-            inline Point3D::Const::List points() const { return Point3D::Const::List{reader_.getPoints()}; }
+            inline ::rpp_schema::rpp_common::Point3D::Const::List points() const { return ::rpp_schema::rpp_common::Point3D::Const::List{reader_.getPoints(), message_lifetime_}; }
 
 
             Path3D_Native as_struct() const {
 
-                std::vector<Point3D_Native> points_vec;
+                std::vector<::rpp_schema::rpp_common::Point3D_Native> points_vec;
                 auto capnp_points = reader_.getPoints();
                 points_vec.reserve(capnp_points.size());
                 for (size_t i = 0; i < capnp_points.size(); ++i) {
-                    points_vec.push_back(Point3D::Const(capnp_points[i]).as_struct());
+                    points_vec.push_back(::rpp_schema::rpp_common::Point3D::Const(capnp_points[i]).as_struct());
                 }
 
 
@@ -113,21 +117,21 @@ public:
         Path3D(const Path3D&) = delete;
         Path3D& operator=(const Path3D&) = delete;
 
-        Point3D::List points() { return Point3D::List{builder_.getPoints(),
-                [this](size_t new_size) {
-                    return builder_.initPoints(new_size);
+        ::rpp_schema::rpp_common::Point3D::List points() { return ::rpp_schema::rpp_common::Point3D::List{builder_.getPoints(),
+                [builder = builder_](size_t new_size) mutable {
+                    return builder.initPoints(new_size);
                 }
             };
         }
-        Point3D::Const::List points() const { return Point3D::Const::List{builder_.asReader().getPoints()}; }
+        ::rpp_schema::rpp_common::Point3D::Const::List points() const { return ::rpp_schema::rpp_common::Point3D::Const::List{builder_.asReader().getPoints()}; }
 
         Path3D_Native as_struct() const {
 
-            std::vector<Point3D_Native> points_vec;
+            std::vector<::rpp_schema::rpp_common::Point3D_Native> points_vec;
             auto capnp_points = builder_.asReader().getPoints();
             points_vec.reserve(capnp_points.size());
             for (size_t i = 0; i < capnp_points.size(); ++i) {
-                points_vec.push_back(Point3D::Const(capnp_points[i]).as_struct());
+                points_vec.push_back(::rpp_schema::rpp_common::Point3D::Const(capnp_points[i]).as_struct());
             }
 
 

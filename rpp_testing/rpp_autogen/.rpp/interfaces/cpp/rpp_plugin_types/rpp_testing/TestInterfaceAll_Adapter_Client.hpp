@@ -1,4 +1,5 @@
 #pragma once
+#include "TestInterfaceAll.hpp"
 #include <functional>
 #include <memory>
 #include <optional>
@@ -178,8 +179,9 @@ public:
         request.setParamStruct2(paramStruct2);
 
         auto response = request.send().wait(io_->waitScope);
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithStructParam.", info_.name.c_str());
-        return TestStruct1::Const(response.getResultStruct1());
+        return TestStruct1::Const(response_owner->getResultStruct1(), response_owner);
         }
         return executor_->get().call([this, &paramStruct1, &paramStruct2](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=funcWithStructParam.",
@@ -189,8 +191,9 @@ public:
         request.setParamStruct2(paramStruct2);
 
         auto response = request.send().wait(io.waitScope);
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithStructParam.", info_.name.c_str());
-        return TestStruct1::Const(response.getResultStruct1());
+        return TestStruct1::Const(response_owner->getResultStruct1(), response_owner);
         });
     }
 
@@ -203,11 +206,9 @@ public:
         request.setParamListStruct(paramListStruct);
 
         auto response = request.send().wait(io_->waitScope);
-
-        auto resultList = response.getResultList();
-
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithListParam.", info_.name.c_str());
-        return resultList;
+        return rpp::ListConst<double>(response_owner->getResultList(), response_owner);
         }
         return executor_->get().call([this, &paramListFloat, &paramListStruct](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=funcWithListParam.",
@@ -217,11 +218,9 @@ public:
         request.setParamListStruct(paramListStruct);
 
         auto response = request.send().wait(io.waitScope);
-
-        auto resultList = response.getResultList();
-
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithListParam.", info_.name.c_str());
-        return resultList;
+        return rpp::ListConst<double>(response_owner->getResultList(), response_owner);
         });
     }
 
@@ -233,11 +232,9 @@ public:
         request.setParamListStruct(paramListStruct);
 
         auto response = request.send().wait(io_->waitScope);
-
-        auto resultListStruct2 = response.getResultListStruct2();
-
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithListOfStructParam.", info_.name.c_str());
-        return resultListStruct2;
+        return TestStruct2::Const::List(response_owner->getResultListStruct2(), response_owner);
         }
         return executor_->get().call([this, &paramListStruct](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=funcWithListOfStructParam.",
@@ -246,11 +243,9 @@ public:
         request.setParamListStruct(paramListStruct);
 
         auto response = request.send().wait(io.waitScope);
-
-        auto resultListStruct2 = response.getResultListStruct2();
-
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithListOfStructParam.", info_.name.c_str());
-        return resultListStruct2;
+        return TestStruct2::Const::List(response_owner->getResultListStruct2(), response_owner);
         });
     }
 
@@ -285,8 +280,9 @@ public:
 
 
         auto response = request.send().wait(io_->waitScope);
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithMultipleStructReturns.", info_.name.c_str());
-        return std::make_tuple(TestStruct1::Const(response.getResultStruct1()), TestStruct2::Const(response.getResultStruct2()));
+        return std::make_tuple(TestStruct1::Const(response_owner->getResultStruct1(), response_owner), TestStruct2::Const(response_owner->getResultStruct2(), response_owner));
         }
         return executor_->get().call([this](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=funcWithMultipleStructReturns.",
@@ -295,8 +291,9 @@ public:
 
 
         auto response = request.send().wait(io.waitScope);
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithMultipleStructReturns.", info_.name.c_str());
-        return std::make_tuple(TestStruct1::Const(response.getResultStruct1()), TestStruct2::Const(response.getResultStruct2()));
+        return std::make_tuple(TestStruct1::Const(response_owner->getResultStruct1(), response_owner), TestStruct2::Const(response_owner->getResultStruct2(), response_owner));
         });
     }
 
@@ -308,14 +305,9 @@ public:
 
 
         auto response = request.send().wait(io_->waitScope);
-
-        auto resultListFloat = response.getResultListFloat();
-
-
-        auto resultListStruct = response.getResultListStruct();
-
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithMultipleListReturns.", info_.name.c_str());
-        return std::make_tuple(resultListFloat, resultListStruct);
+        return std::make_tuple(rpp::ListConst<double>(response_owner->getResultListFloat(), response_owner), TestStruct1::Const::List(response_owner->getResultListStruct(), response_owner));
         }
         return executor_->get().call([this](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=funcWithMultipleListReturns.",
@@ -324,14 +316,9 @@ public:
 
 
         auto response = request.send().wait(io.waitScope);
-
-        auto resultListFloat = response.getResultListFloat();
-
-
-        auto resultListStruct = response.getResultListStruct();
-
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=funcWithMultipleListReturns.", info_.name.c_str());
-        return std::make_tuple(resultListFloat, resultListStruct);
+        return std::make_tuple(rpp::ListConst<double>(response_owner->getResultListFloat(), response_owner), TestStruct1::Const::List(response_owner->getResultListStruct(), response_owner));
         });
     }
 

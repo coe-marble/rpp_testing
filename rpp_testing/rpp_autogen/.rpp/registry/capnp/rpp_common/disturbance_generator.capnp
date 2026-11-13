@@ -1,4 +1,4 @@
-@0xc56d8bcca7bfaf21;
+@0xb97711affac7f79e;
 using Cxx = import "/capnp/c++.capnp";
 $Cxx.namespace("schema::rpp_common");
 using Msgs = import "rpp_common/msgs.capnp";

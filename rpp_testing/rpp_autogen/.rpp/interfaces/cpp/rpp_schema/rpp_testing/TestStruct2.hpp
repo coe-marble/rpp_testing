@@ -17,7 +17,7 @@ struct TestStruct2_Native {
 
     double linear;
     double angular;
-    TestStruct1_Native struct1;
+    ::rpp_schema::rpp_testing::TestStruct1_Native struct1;
 };
 
 
@@ -30,9 +30,11 @@ public:
         private:
             schema::rpp_testing::TestStruct2::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_testing::TestStruct2::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_testing::TestStruct2::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const TestStruct2& main_wrapper);
             Const(TestStruct2&& main_wrapper)
@@ -41,12 +43,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -56,7 +60,7 @@ public:
 
             operator schema::rpp_testing::TestStruct2::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_testing::TestStruct2::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -75,7 +79,7 @@ public:
             inline double angular() const { return reader_.getAngular(); }
 
 
-            inline TestStruct1::Const struct1() const { return TestStruct1::Const(reader_.getStruct1()); }
+            inline ::rpp_schema::rpp_testing::TestStruct1::Const struct1() const { return ::rpp_schema::rpp_testing::TestStruct1::Const(reader_.getStruct1(), message_lifetime_); }
 
 
             TestStruct2_Native as_struct() const {
@@ -83,7 +87,7 @@ public:
                 return TestStruct2_Native{
                     reader_.getLinear(),
                     reader_.getAngular(),
-                    TestStruct1::Const(reader_.getStruct1()).as_struct()
+                    ::rpp_schema::rpp_testing::TestStruct1::Const(reader_.getStruct1()).as_struct()
                 };
             }
     };
@@ -145,15 +149,15 @@ public:
         angular_Proxy angular() { return angular_Proxy{builder_}; }
         double angular() const { return builder_.asReader().getAngular(); }
 
-        TestStruct1 struct1() { return TestStruct1(builder_.getStruct1()); }
-        TestStruct1::Const struct1() const { return TestStruct1::Const(builder_.asReader().getStruct1()); }
+        ::rpp_schema::rpp_testing::TestStruct1 struct1() { return ::rpp_schema::rpp_testing::TestStruct1(builder_.getStruct1()); }
+        ::rpp_schema::rpp_testing::TestStruct1::Const struct1() const { return ::rpp_schema::rpp_testing::TestStruct1::Const(builder_.asReader().getStruct1()); }
 
         TestStruct2_Native as_struct() const {
 
             return TestStruct2_Native{
                 builder_.asReader().getLinear(),
                 builder_.asReader().getAngular(),
-                TestStruct1::Const(builder_.asReader().getStruct1()).as_struct()
+                ::rpp_schema::rpp_testing::TestStruct1::Const(builder_.asReader().getStruct1()).as_struct()
             };
         }
 

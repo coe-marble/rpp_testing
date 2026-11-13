@@ -22,41 +22,41 @@ CAPNP_BEGIN_HEADER
 namespace capnp {
 namespace schemas {
 
-CAPNP_DECLARE_SCHEMA(f69cff8db05f50b5);
-CAPNP_DECLARE_SCHEMA(e73db92f81717c53);
-CAPNP_DECLARE_SCHEMA(c380a30b7c2961f4);
-CAPNP_DECLARE_SCHEMA(e6570be9cd0ac231);
-CAPNP_DECLARE_SCHEMA(ea8b4b28124df633);
-CAPNP_DECLARE_SCHEMA(838ac0843ca55a56);
-CAPNP_DECLARE_SCHEMA(ee11032bbe4e080e);
-CAPNP_DECLARE_SCHEMA(f5071e02311566c8);
-CAPNP_DECLARE_SCHEMA(9f1431797f4173a8);
-CAPNP_DECLARE_SCHEMA(e50132c1123683c3);
-CAPNP_DECLARE_SCHEMA(cb54500970ab0968);
-CAPNP_DECLARE_SCHEMA(9524f626050a51f4);
-CAPNP_DECLARE_SCHEMA(a5cbbd03b9bc7fb6);
-CAPNP_DECLARE_SCHEMA(d017d6ad59e8e72e);
-CAPNP_DECLARE_SCHEMA(d48e1c9c18d0f46a);
-CAPNP_DECLARE_SCHEMA(bb02e8e1ffc979ed);
-CAPNP_DECLARE_SCHEMA(e3128f7a097c06ee);
-CAPNP_DECLARE_SCHEMA(9e5ba56df5c5cc46);
-CAPNP_DECLARE_SCHEMA(eb7800329e672025);
-CAPNP_DECLARE_SCHEMA(f32dd6a57e31c9c6);
-CAPNP_DECLARE_SCHEMA(afdcfa351934b428);
-CAPNP_DECLARE_SCHEMA(9035060bc9fcc59c);
-CAPNP_DECLARE_SCHEMA(c417869be3a50bdc);
-CAPNP_DECLARE_SCHEMA(b899a6cd6dcfc0b5);
-CAPNP_DECLARE_SCHEMA(a30064f97bf12060);
-CAPNP_DECLARE_SCHEMA(90fd4007f7aef08f);
-CAPNP_DECLARE_SCHEMA(93a132785c9228a7);
-CAPNP_DECLARE_SCHEMA(9d339d316a7bdb93);
-CAPNP_DECLARE_SCHEMA(ffd8132195629958);
-CAPNP_DECLARE_SCHEMA(90a9af625876fb37);
-CAPNP_DECLARE_SCHEMA(c8ebfdfaffcc5eb7);
-CAPNP_DECLARE_SCHEMA(dfa0364e06d05885);
-CAPNP_DECLARE_SCHEMA(e633447ced788af5);
-CAPNP_DECLARE_SCHEMA(dcd36b0c6d179c7c);
-CAPNP_DECLARE_SCHEMA(f76506f4fe8caba1);
+CAPNP_DECLARE_SCHEMA(9462df11569b601c);
+CAPNP_DECLARE_SCHEMA(8046252a3a3ee67e);
+CAPNP_DECLARE_SCHEMA(cc9bff6c42827f24);
+CAPNP_DECLARE_SCHEMA(dfcaf0b45f3950e9);
+CAPNP_DECLARE_SCHEMA(f2b8543339d2ed9e);
+CAPNP_DECLARE_SCHEMA(a4d9ecca72de15b8);
+CAPNP_DECLARE_SCHEMA(829dc0eb4777b430);
+CAPNP_DECLARE_SCHEMA(b103fa47b1630994);
+CAPNP_DECLARE_SCHEMA(e0fac99f523d0e2b);
+CAPNP_DECLARE_SCHEMA(96edd7b1561f2fc0);
+CAPNP_DECLARE_SCHEMA(8c5d2dc08c5c5536);
+CAPNP_DECLARE_SCHEMA(cf701f24f50faaa4);
+CAPNP_DECLARE_SCHEMA(829200ca96b3c578);
+CAPNP_DECLARE_SCHEMA(ca39c2ae1a756569);
+CAPNP_DECLARE_SCHEMA(ff95cf975f966a9f);
+CAPNP_DECLARE_SCHEMA(e2652cbb7b0dd96d);
+CAPNP_DECLARE_SCHEMA(bf4bc4868257919a);
+CAPNP_DECLARE_SCHEMA(b8f9c7071241a731);
+CAPNP_DECLARE_SCHEMA(b8c91f30c6498338);
+CAPNP_DECLARE_SCHEMA(e6aa4620030fd101);
+CAPNP_DECLARE_SCHEMA(9208502d6beaef14);
+CAPNP_DECLARE_SCHEMA(dd860fa2f3b5dff7);
+CAPNP_DECLARE_SCHEMA(ab7f79539884e6ee);
+CAPNP_DECLARE_SCHEMA(f333e6f6c10d47c5);
+CAPNP_DECLARE_SCHEMA(d66adb30689fca9b);
+CAPNP_DECLARE_SCHEMA(ae0634d1b92b3720);
+CAPNP_DECLARE_SCHEMA(9ab5e151c407945e);
+CAPNP_DECLARE_SCHEMA(e0ed4ce386f5411e);
+CAPNP_DECLARE_SCHEMA(cb77e42fa3412cbc);
+CAPNP_DECLARE_SCHEMA(8132c0b15fe4745c);
+CAPNP_DECLARE_SCHEMA(df4f81c0d790a9cc);
+CAPNP_DECLARE_SCHEMA(92e140ed724f6b86);
+CAPNP_DECLARE_SCHEMA(ae529a1c1eceb78d);
+CAPNP_DECLARE_SCHEMA(adb565dca311dbe9);
+CAPNP_DECLARE_SCHEMA(aca1f54ffb71580e);
 
 }  // namespace schemas
 }  // namespace capnp
@@ -80,7 +80,7 @@ struct Controller {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(f69cff8db05f50b5)
+    CAPNP_DECLARE_INTERFACE_HEADER(9462df11569b601c)
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
     static const ::capnp::_::RawBrandedSchema::Dependency brandDependencies[];
@@ -99,7 +99,7 @@ struct Controller<State, Command>::StepParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e73db92f81717c53, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(8046252a3a3ee67e, 1, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -118,7 +118,7 @@ struct Controller<State, Command>::StepResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(c380a30b7c2961f4, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(cc9bff6c42827f24, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -137,7 +137,7 @@ struct Controller<State, Command>::ValidateParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e6570be9cd0ac231, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(dfcaf0b45f3950e9, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -156,7 +156,7 @@ struct Controller<State, Command>::ValidateResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ea8b4b28124df633, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(f2b8543339d2ed9e, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -186,7 +186,7 @@ struct DisturbanceGenerator {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(838ac0843ca55a56)
+    CAPNP_DECLARE_INTERFACE_HEADER(a4d9ecca72de15b8)
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
     static const ::capnp::_::RawBrandedSchema::Dependency brandDependencies[];
@@ -205,7 +205,7 @@ struct DisturbanceGenerator<State>::StepParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ee11032bbe4e080e, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(829dc0eb4777b430, 1, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -224,7 +224,7 @@ struct DisturbanceGenerator<State>::StepResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f5071e02311566c8, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b103fa47b1630994, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -243,7 +243,7 @@ struct DisturbanceGenerator<State>::ValidateParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9f1431797f4173a8, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(e0fac99f523d0e2b, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -262,7 +262,7 @@ struct DisturbanceGenerator<State>::ValidateResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e50132c1123683c3, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(96edd7b1561f2fc0, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -281,7 +281,7 @@ struct DisturbanceGenerator<State>::SetDataParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(cb54500970ab0968, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(8c5d2dc08c5c5536, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -300,7 +300,7 @@ struct DisturbanceGenerator<State>::SetDataResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9524f626050a51f4, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(cf701f24f50faaa4, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -319,7 +319,7 @@ struct DisturbanceGenerator<State>::GetDataParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a5cbbd03b9bc7fb6, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(829200ca96b3c578, 0, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -338,7 +338,7 @@ struct DisturbanceGenerator<State>::GetDataResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(d017d6ad59e8e72e, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(ca39c2ae1a756569, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -359,7 +359,7 @@ struct DisturbanceGenerator2D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(d48e1c9c18d0f46a)
+    CAPNP_DECLARE_INTERFACE_HEADER(ff95cf975f966a9f)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -376,7 +376,7 @@ struct MotionController2D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(bb02e8e1ffc979ed)
+    CAPNP_DECLARE_INTERFACE_HEADER(e2652cbb7b0dd96d)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -390,7 +390,7 @@ struct TestStruct1 {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e3128f7a097c06ee, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(bf4bc4868257919a, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -405,7 +405,7 @@ struct TestStruct2 {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9e5ba56df5c5cc46, 2, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b8f9c7071241a731, 2, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -439,7 +439,7 @@ struct TestInterfaceAll {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(eb7800329e672025)
+    CAPNP_DECLARE_INTERFACE_HEADER(b8c91f30c6498338)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -453,7 +453,7 @@ struct TestInterfaceAll::FuncEmptyParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f32dd6a57e31c9c6, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(e6aa4620030fd101, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -468,7 +468,7 @@ struct TestInterfaceAll::FuncEmptyResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(afdcfa351934b428, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(9208502d6beaef14, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -483,7 +483,7 @@ struct TestInterfaceAll::FuncWithSimpleParamsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9035060bc9fcc59c, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(dd860fa2f3b5dff7, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -498,7 +498,7 @@ struct TestInterfaceAll::FuncWithSimpleParamsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(c417869be3a50bdc, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(ab7f79539884e6ee, 1, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -513,7 +513,7 @@ struct TestInterfaceAll::FuncWithStructParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b899a6cd6dcfc0b5, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(f333e6f6c10d47c5, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -528,7 +528,7 @@ struct TestInterfaceAll::FuncWithStructParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a30064f97bf12060, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(d66adb30689fca9b, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -543,7 +543,7 @@ struct TestInterfaceAll::FuncWithListParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(90fd4007f7aef08f, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(ae0634d1b92b3720, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -558,7 +558,7 @@ struct TestInterfaceAll::FuncWithListParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(93a132785c9228a7, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(9ab5e151c407945e, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -573,7 +573,7 @@ struct TestInterfaceAll::FuncWithListOfStructParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9d339d316a7bdb93, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(e0ed4ce386f5411e, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -588,7 +588,7 @@ struct TestInterfaceAll::FuncWithListOfStructParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ffd8132195629958, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(cb77e42fa3412cbc, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -603,7 +603,7 @@ struct TestInterfaceAll::FuncWithMultipleSimpleReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(90a9af625876fb37, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(8132c0b15fe4745c, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -618,7 +618,7 @@ struct TestInterfaceAll::FuncWithMultipleSimpleReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(c8ebfdfaffcc5eb7, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(df4f81c0d790a9cc, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -633,7 +633,7 @@ struct TestInterfaceAll::FuncWithMultipleStructReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(dfa0364e06d05885, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(92e140ed724f6b86, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -648,7 +648,7 @@ struct TestInterfaceAll::FuncWithMultipleStructReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e633447ced788af5, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(ae529a1c1eceb78d, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -663,7 +663,7 @@ struct TestInterfaceAll::FuncWithMultipleListReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(dcd36b0c6d179c7c, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(adb565dca311dbe9, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -678,7 +678,7 @@ struct TestInterfaceAll::FuncWithMultipleListReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f76506f4fe8caba1, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(aca1f54ffb71580e, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -3735,7 +3735,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::StepParams::_
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::StepParams::_capnpPrivate::brandScopes[] = {
-  { 0xf69cff8db05f50b5, brandBindings + 0, 2, false},
+  { 0x9462df11569b601c, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepParams::_capnpPrivate::brandBindings[] = {
@@ -3744,7 +3744,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepPara
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::StepParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_e73db92f81717c53, brandScopes, nullptr,
+  &::capnp::schemas::s_8046252a3a3ee67e, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3818,7 +3818,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::StepResults::
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::StepResults::_capnpPrivate::brandScopes[] = {
-  { 0xf69cff8db05f50b5, brandBindings + 0, 2, false},
+  { 0x9462df11569b601c, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepResults::_capnpPrivate::brandBindings[] = {
@@ -3827,7 +3827,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepResu
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::StepResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_c380a30b7c2961f4, brandScopes, nullptr,
+  &::capnp::schemas::s_cc9bff6c42827f24, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3901,7 +3901,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::ValidateParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::ValidateParams::_capnpPrivate::brandScopes[] = {
-  { 0xf69cff8db05f50b5, brandBindings + 0, 2, false},
+  { 0x9462df11569b601c, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::ValidateParams::_capnpPrivate::brandBindings[] = {
@@ -3910,7 +3910,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::Validate
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::ValidateParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_e6570be9cd0ac231, brandScopes, nullptr,
+  &::capnp::schemas::s_dfcaf0b45f3950e9, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3948,7 +3948,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::ValidateResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::ValidateResults::_capnpPrivate::brandScopes[] = {
-  { 0xf69cff8db05f50b5, brandBindings + 0, 2, false},
+  { 0x9462df11569b601c, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::ValidateResults::_capnpPrivate::brandBindings[] = {
@@ -3957,7 +3957,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::Validate
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::ValidateResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_ea8b4b28124df633, brandScopes, nullptr,
+  &::capnp::schemas::s_f2b8543339d2ed9e, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3967,32 +3967,32 @@ template <typename State, typename Command>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::Controller<State, Command>::StepParams, typename  ::schema::rpp_testing::Controller<State, Command>::StepResults>)
 Controller<State, Command>::Client::stepRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::Controller<State, Command>::StepParams, typename  ::schema::rpp_testing::Controller<State, Command>::StepResults>(
-      0xf69cff8db05f50b5ull, 0, sizeHint, {false});
+      0x9462df11569b601cull, 0, sizeHint, {false});
 }
 template <typename State, typename Command>
 ::kj::Promise<void> Controller<State, Command>::Server::step(StepContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:Controller", "step",
-      0xf69cff8db05f50b5ull, 0);
+      0x9462df11569b601cull, 0);
 }
 template <typename State, typename Command>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::Controller<State, Command>::ValidateParams, typename  ::schema::rpp_testing::Controller<State, Command>::ValidateResults>)
 Controller<State, Command>::Client::validateRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::Controller<State, Command>::ValidateParams, typename  ::schema::rpp_testing::Controller<State, Command>::ValidateResults>(
-      0xf69cff8db05f50b5ull, 1, sizeHint, {true});
+      0x9462df11569b601cull, 1, sizeHint, {true});
 }
 template <typename State, typename Command>
 ::kj::Promise<void> Controller<State, Command>::Server::validate(ValidateContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:Controller", "validate",
-      0xf69cff8db05f50b5ull, 1);
+      0x9462df11569b601cull, 1);
 }
 template <typename State, typename Command>
 ::capnp::Capability::Server::DispatchCallResult Controller<State, Command>::Server::dispatchCall(
     uint64_t interfaceId, uint16_t methodId,
     ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context) {
   switch (interfaceId) {
-    case 0xf69cff8db05f50b5ull:
+    case 0x9462df11569b601cull:
       return dispatchCallInternal(methodId, context);
     default:
       return internalUnimplemented("test_plugin_types.capnp:Controller", interfaceId);
@@ -4021,7 +4021,7 @@ template <typename State, typename Command>
       (void)context;
       return ::capnp::Capability::Server::internalUnimplemented(
           "test_plugin_types.capnp:Controller",
-          0xf69cff8db05f50b5ull, methodId);
+          0x9462df11569b601cull, methodId);
   }
 }
 #endif  // !CAPNP_LITE
@@ -4036,7 +4036,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::_capnpPrivate
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::_capnpPrivate::brandScopes[] = {
-  { 0xf69cff8db05f50b5, brandBindings + 0, 2, false},
+  { 0x9462df11569b601c, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::_capnpPrivate::brandBindings[] = {
@@ -4052,7 +4052,7 @@ const ::capnp::_::RawBrandedSchema::Dependency Controller<State, Command>::_capn
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_f69cff8db05f50b5, brandScopes, brandDependencies,
+  &::capnp::schemas::s_9462df11569b601c, brandScopes, brandDependencies,
   1, 4, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4174,7 +4174,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::StepParams::
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::StepParams::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepParams::_capnpPrivate::brandBindings[] = {
@@ -4182,7 +4182,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepPar
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::StepParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_ee11032bbe4e080e, brandScopes, nullptr,
+  &::capnp::schemas::s_829dc0eb4777b430, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4256,7 +4256,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::StepResults:
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::StepResults::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepResults::_capnpPrivate::brandBindings[] = {
@@ -4264,7 +4264,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepRes
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::StepResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_f5071e02311566c8, brandScopes, nullptr,
+  &::capnp::schemas::s_b103fa47b1630994, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4338,7 +4338,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::ValidatePara
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::brandBindings[] = {
@@ -4346,7 +4346,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::Validat
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_9f1431797f4173a8, brandScopes, nullptr,
+  &::capnp::schemas::s_e0fac99f523d0e2b, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4384,7 +4384,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::ValidateResu
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::brandBindings[] = {
@@ -4392,7 +4392,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::Validat
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_e50132c1123683c3, brandScopes, nullptr,
+  &::capnp::schemas::s_96edd7b1561f2fc0, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4455,7 +4455,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::SetDataParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::brandBindings[] = {
@@ -4463,7 +4463,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_cb54500970ab0968, brandScopes, nullptr,
+  &::capnp::schemas::s_8c5d2dc08c5c5536, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4501,7 +4501,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::SetDataResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::brandBindings[] = {
@@ -4509,7 +4509,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_9524f626050a51f4, brandScopes, nullptr,
+  &::capnp::schemas::s_cf701f24f50faaa4, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4530,7 +4530,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::GetDataParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::brandBindings[] = {
@@ -4538,7 +4538,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_a5cbbd03b9bc7fb6, brandScopes, nullptr,
+  &::capnp::schemas::s_829200ca96b3c578, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4601,7 +4601,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::GetDataResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::brandBindings[] = {
@@ -4609,7 +4609,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_d017d6ad59e8e72e, brandScopes, nullptr,
+  &::capnp::schemas::s_ca39c2ae1a756569, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4619,56 +4619,56 @@ template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepResults>)
 DisturbanceGenerator<State>::Client::stepRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepResults>(
-      0x838ac0843ca55a56ull, 0, sizeHint, {false});
+      0xa4d9ecca72de15b8ull, 0, sizeHint, {false});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::step(StepContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:DisturbanceGenerator", "step",
-      0x838ac0843ca55a56ull, 0);
+      0xa4d9ecca72de15b8ull, 0);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateResults>)
 DisturbanceGenerator<State>::Client::validateRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateResults>(
-      0x838ac0843ca55a56ull, 1, sizeHint, {true});
+      0xa4d9ecca72de15b8ull, 1, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::validate(ValidateContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:DisturbanceGenerator", "validate",
-      0x838ac0843ca55a56ull, 1);
+      0xa4d9ecca72de15b8ull, 1);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataResults>)
 DisturbanceGenerator<State>::Client::setDataRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataResults>(
-      0x838ac0843ca55a56ull, 2, sizeHint, {true});
+      0xa4d9ecca72de15b8ull, 2, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::setData(SetDataContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:DisturbanceGenerator", "setData",
-      0x838ac0843ca55a56ull, 2);
+      0xa4d9ecca72de15b8ull, 2);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataResults>)
 DisturbanceGenerator<State>::Client::getDataRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataResults>(
-      0x838ac0843ca55a56ull, 3, sizeHint, {true});
+      0xa4d9ecca72de15b8ull, 3, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::getData(GetDataContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "test_plugin_types.capnp:DisturbanceGenerator", "getData",
-      0x838ac0843ca55a56ull, 3);
+      0xa4d9ecca72de15b8ull, 3);
 }
 template <typename State>
 ::capnp::Capability::Server::DispatchCallResult DisturbanceGenerator<State>::Server::dispatchCall(
     uint64_t interfaceId, uint16_t methodId,
     ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context) {
   switch (interfaceId) {
-    case 0x838ac0843ca55a56ull:
+    case 0xa4d9ecca72de15b8ull:
       return dispatchCallInternal(methodId, context);
     default:
       return internalUnimplemented("test_plugin_types.capnp:DisturbanceGenerator", interfaceId);
@@ -4711,7 +4711,7 @@ template <typename State>
       (void)context;
       return ::capnp::Capability::Server::internalUnimplemented(
           "test_plugin_types.capnp:DisturbanceGenerator",
-          0x838ac0843ca55a56ull, methodId);
+          0xa4d9ecca72de15b8ull, methodId);
   }
 }
 #endif  // !CAPNP_LITE
@@ -4726,7 +4726,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::_capnpPrivat
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::_capnpPrivate::brandScopes[] = {
-  { 0x838ac0843ca55a56, brandBindings + 0, 1, false},
+  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::_capnpPrivate::brandBindings[] = {
@@ -4745,7 +4745,7 @@ const ::capnp::_::RawBrandedSchema::Dependency DisturbanceGenerator<State>::_cap
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_838ac0843ca55a56, brandScopes, brandDependencies,
+  &::capnp::schemas::s_a4d9ecca72de15b8, brandScopes, brandDependencies,
   1, 8, nullptr
 };
 #endif  // !CAPNP_LITE

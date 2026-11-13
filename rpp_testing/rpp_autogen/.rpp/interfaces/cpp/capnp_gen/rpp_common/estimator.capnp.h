@@ -22,13 +22,13 @@ CAPNP_BEGIN_HEADER
 namespace capnp {
 namespace schemas {
 
-CAPNP_DECLARE_SCHEMA(8953f006f0f897d3);
-CAPNP_DECLARE_SCHEMA(ef3eed0acb3e0408);
-CAPNP_DECLARE_SCHEMA(80fcce44621a92c0);
-CAPNP_DECLARE_SCHEMA(9845d021729b4675);
-CAPNP_DECLARE_SCHEMA(dea2572462408b0d);
-CAPNP_DECLARE_SCHEMA(bfb7b6b9f1da4e4e);
-CAPNP_DECLARE_SCHEMA(95674e8356de10cf);
+CAPNP_DECLARE_SCHEMA(dc4bd4958662635b);
+CAPNP_DECLARE_SCHEMA(945d32d1261da7ba);
+CAPNP_DECLARE_SCHEMA(ffe6faaff30230c8);
+CAPNP_DECLARE_SCHEMA(9aa9306ce8d0bf07);
+CAPNP_DECLARE_SCHEMA(92ca959f6cec10c5);
+CAPNP_DECLARE_SCHEMA(8b359c4613419c1f);
+CAPNP_DECLARE_SCHEMA(b8940dc7a29ea27d);
 
 }  // namespace schemas
 }  // namespace capnp
@@ -52,7 +52,7 @@ struct Estimator {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(8953f006f0f897d3)
+    CAPNP_DECLARE_INTERFACE_HEADER(dc4bd4958662635b)
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
     static const ::capnp::_::RawBrandedSchema::Dependency brandDependencies[];
@@ -71,7 +71,7 @@ struct Estimator<State>::StepParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ef3eed0acb3e0408, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(945d32d1261da7ba, 1, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -90,7 +90,7 @@ struct Estimator<State>::StepResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(80fcce44621a92c0, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(ffe6faaff30230c8, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -109,7 +109,7 @@ struct Estimator<State>::ValidateParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9845d021729b4675, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(9aa9306ce8d0bf07, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -128,7 +128,7 @@ struct Estimator<State>::ValidateResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(dea2572462408b0d, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(92ca959f6cec10c5, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -149,7 +149,7 @@ struct Estimator2D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(bfb7b6b9f1da4e4e)
+    CAPNP_DECLARE_INTERFACE_HEADER(8b359c4613419c1f)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -166,7 +166,7 @@ struct Estimator3D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(95674e8356de10cf)
+    CAPNP_DECLARE_INTERFACE_HEADER(b8940dc7a29ea27d)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -839,7 +839,7 @@ constexpr ::capnp::_::RawSchema const* Estimator<State>::StepParams::_capnpPriva
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope Estimator<State>::StepParams::_capnpPrivate::brandScopes[] = {
-  { 0x8953f006f0f897d3, brandBindings + 0, 1, false},
+  { 0xdc4bd4958662635b, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::StepParams::_capnpPrivate::brandBindings[] = {
@@ -847,7 +847,7 @@ const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::StepParams::_capnp
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema Estimator<State>::StepParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_ef3eed0acb3e0408, brandScopes, nullptr,
+  &::capnp::schemas::s_945d32d1261da7ba, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -921,7 +921,7 @@ constexpr ::capnp::_::RawSchema const* Estimator<State>::StepResults::_capnpPriv
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope Estimator<State>::StepResults::_capnpPrivate::brandScopes[] = {
-  { 0x8953f006f0f897d3, brandBindings + 0, 1, false},
+  { 0xdc4bd4958662635b, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::StepResults::_capnpPrivate::brandBindings[] = {
@@ -929,7 +929,7 @@ const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::StepResults::_capn
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema Estimator<State>::StepResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_80fcce44621a92c0, brandScopes, nullptr,
+  &::capnp::schemas::s_ffe6faaff30230c8, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -1003,7 +1003,7 @@ constexpr ::capnp::_::RawSchema const* Estimator<State>::ValidateParams::_capnpP
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope Estimator<State>::ValidateParams::_capnpPrivate::brandScopes[] = {
-  { 0x8953f006f0f897d3, brandBindings + 0, 1, false},
+  { 0xdc4bd4958662635b, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::ValidateParams::_capnpPrivate::brandBindings[] = {
@@ -1011,7 +1011,7 @@ const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::ValidateParams::_c
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema Estimator<State>::ValidateParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_9845d021729b4675, brandScopes, nullptr,
+  &::capnp::schemas::s_9aa9306ce8d0bf07, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -1049,7 +1049,7 @@ constexpr ::capnp::_::RawSchema const* Estimator<State>::ValidateResults::_capnp
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope Estimator<State>::ValidateResults::_capnpPrivate::brandScopes[] = {
-  { 0x8953f006f0f897d3, brandBindings + 0, 1, false},
+  { 0xdc4bd4958662635b, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::ValidateResults::_capnpPrivate::brandBindings[] = {
@@ -1057,7 +1057,7 @@ const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::ValidateResults::_
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema Estimator<State>::ValidateResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_dea2572462408b0d, brandScopes, nullptr,
+  &::capnp::schemas::s_92ca959f6cec10c5, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -1067,32 +1067,32 @@ template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_common::Estimator<State>::StepParams, typename  ::schema::rpp_common::Estimator<State>::StepResults>)
 Estimator<State>::Client::stepRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_common::Estimator<State>::StepParams, typename  ::schema::rpp_common::Estimator<State>::StepResults>(
-      0x8953f006f0f897d3ull, 0, sizeHint, {false});
+      0xdc4bd4958662635bull, 0, sizeHint, {false});
 }
 template <typename State>
 ::kj::Promise<void> Estimator<State>::Server::step(StepContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "estimator.capnp:Estimator", "step",
-      0x8953f006f0f897d3ull, 0);
+      0xdc4bd4958662635bull, 0);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_common::Estimator<State>::ValidateParams, typename  ::schema::rpp_common::Estimator<State>::ValidateResults>)
 Estimator<State>::Client::validateRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_common::Estimator<State>::ValidateParams, typename  ::schema::rpp_common::Estimator<State>::ValidateResults>(
-      0x8953f006f0f897d3ull, 1, sizeHint, {true});
+      0xdc4bd4958662635bull, 1, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> Estimator<State>::Server::validate(ValidateContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
       "estimator.capnp:Estimator", "validate",
-      0x8953f006f0f897d3ull, 1);
+      0xdc4bd4958662635bull, 1);
 }
 template <typename State>
 ::capnp::Capability::Server::DispatchCallResult Estimator<State>::Server::dispatchCall(
     uint64_t interfaceId, uint16_t methodId,
     ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context) {
   switch (interfaceId) {
-    case 0x8953f006f0f897d3ull:
+    case 0xdc4bd4958662635bull:
       return dispatchCallInternal(methodId, context);
     default:
       return internalUnimplemented("estimator.capnp:Estimator", interfaceId);
@@ -1121,7 +1121,7 @@ template <typename State>
       (void)context;
       return ::capnp::Capability::Server::internalUnimplemented(
           "estimator.capnp:Estimator",
-          0x8953f006f0f897d3ull, methodId);
+          0xdc4bd4958662635bull, methodId);
   }
 }
 #endif  // !CAPNP_LITE
@@ -1136,7 +1136,7 @@ constexpr ::capnp::_::RawSchema const* Estimator<State>::_capnpPrivate::schema;
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope Estimator<State>::_capnpPrivate::brandScopes[] = {
-  { 0x8953f006f0f897d3, brandBindings + 0, 1, false},
+  { 0xdc4bd4958662635b, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding Estimator<State>::_capnpPrivate::brandBindings[] = {
@@ -1151,7 +1151,7 @@ const ::capnp::_::RawBrandedSchema::Dependency Estimator<State>::_capnpPrivate::
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema Estimator<State>::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_8953f006f0f897d3, brandScopes, brandDependencies,
+  &::capnp::schemas::s_dc4bd4958662635b, brandScopes, brandDependencies,
   1, 4, nullptr
 };
 #endif  // !CAPNP_LITE

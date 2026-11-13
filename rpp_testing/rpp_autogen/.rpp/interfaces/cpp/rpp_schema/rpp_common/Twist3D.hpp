@@ -15,8 +15,8 @@ namespace rpp_schema::rpp_common{
 
 struct Twist3D_Native {
 
-    Point3D_Native linear;
-    Point3D_Native angular;
+    ::rpp_schema::rpp_common::Point3D_Native linear;
+    ::rpp_schema::rpp_common::Point3D_Native angular;
 };
 
 
@@ -29,9 +29,11 @@ public:
         private:
             schema::rpp_common::Twist3D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Twist3D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Twist3D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Twist3D& main_wrapper);
             Const(Twist3D&& main_wrapper)
@@ -40,12 +42,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -55,7 +59,7 @@ public:
 
             operator schema::rpp_common::Twist3D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Twist3D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -68,17 +72,17 @@ public:
             }
         using List = rpp::ListConst<Twist3D>;
 
-            inline Point3D::Const linear() const { return Point3D::Const(reader_.getLinear()); }
+            inline ::rpp_schema::rpp_common::Point3D::Const linear() const { return ::rpp_schema::rpp_common::Point3D::Const(reader_.getLinear(), message_lifetime_); }
 
 
-            inline Point3D::Const angular() const { return Point3D::Const(reader_.getAngular()); }
+            inline ::rpp_schema::rpp_common::Point3D::Const angular() const { return ::rpp_schema::rpp_common::Point3D::Const(reader_.getAngular(), message_lifetime_); }
 
 
             Twist3D_Native as_struct() const {
 
                 return Twist3D_Native{
-                    Point3D::Const(reader_.getLinear()).as_struct(),
-                    Point3D::Const(reader_.getAngular()).as_struct()
+                    ::rpp_schema::rpp_common::Point3D::Const(reader_.getLinear()).as_struct(),
+                    ::rpp_schema::rpp_common::Point3D::Const(reader_.getAngular()).as_struct()
                 };
             }
     };
@@ -110,17 +114,17 @@ public:
         Twist3D(const Twist3D&) = delete;
         Twist3D& operator=(const Twist3D&) = delete;
 
-        Point3D linear() { return Point3D(builder_.getLinear()); }
-        Point3D::Const linear() const { return Point3D::Const(builder_.asReader().getLinear()); }
+        ::rpp_schema::rpp_common::Point3D linear() { return ::rpp_schema::rpp_common::Point3D(builder_.getLinear()); }
+        ::rpp_schema::rpp_common::Point3D::Const linear() const { return ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getLinear()); }
 
-        Point3D angular() { return Point3D(builder_.getAngular()); }
-        Point3D::Const angular() const { return Point3D::Const(builder_.asReader().getAngular()); }
+        ::rpp_schema::rpp_common::Point3D angular() { return ::rpp_schema::rpp_common::Point3D(builder_.getAngular()); }
+        ::rpp_schema::rpp_common::Point3D::Const angular() const { return ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getAngular()); }
 
         Twist3D_Native as_struct() const {
 
             return Twist3D_Native{
-                Point3D::Const(builder_.asReader().getLinear()).as_struct(),
-                Point3D::Const(builder_.asReader().getAngular()).as_struct()
+                ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getLinear()).as_struct(),
+                ::rpp_schema::rpp_common::Point3D::Const(builder_.asReader().getAngular()).as_struct()
             };
         }
 

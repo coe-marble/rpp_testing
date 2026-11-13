@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include "DisturbanceGenerator2D.hpp"
 #include <memory>
 #include <stdexcept>
 #include <string>

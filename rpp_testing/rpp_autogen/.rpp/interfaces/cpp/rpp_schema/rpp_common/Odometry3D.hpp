@@ -16,8 +16,8 @@ namespace rpp_schema::rpp_common{
 
 struct Odometry3D_Native {
 
-    Pose3D_Native pose;
-    Twist3D_Native twist;
+    ::rpp_schema::rpp_common::Pose3D_Native pose;
+    ::rpp_schema::rpp_common::Twist3D_Native twist;
 };
 
 
@@ -30,9 +30,11 @@ public:
         private:
             schema::rpp_common::Odometry3D::Reader reader_;
             std::unique_ptr<capnp::MallocMessageBuilder> orphaned_msg_builder_;
+            std::shared_ptr<void> message_lifetime_;
         public:
-            Const(schema::rpp_common::Odometry3D::Reader reader)
-            : reader_(reader) {}
+            Const(schema::rpp_common::Odometry3D::Reader reader,
+                  std::shared_ptr<void> lifetime = nullptr)
+            : reader_(reader), message_lifetime_(std::move(lifetime)) {}
             virtual ~Const() = default;
             Const(const Odometry3D& main_wrapper);
             Const(Odometry3D&& main_wrapper)
@@ -41,12 +43,14 @@ public:
 
             Const(Const&& other) noexcept
             : reader_(other.reader_),
-              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)) {}
+              orphaned_msg_builder_(std::move(other.orphaned_msg_builder_)),
+              message_lifetime_(std::move(other.message_lifetime_)) {}
 
             Const& operator=(Const&& other) noexcept {
                 if (this != &other) {
                     reader_ = other.reader_;
                     orphaned_msg_builder_ = std::move(other.orphaned_msg_builder_);
+                    message_lifetime_ = std::move(other.message_lifetime_);
                 }
                 return *this;
             }
@@ -56,7 +60,7 @@ public:
 
             operator schema::rpp_common::Odometry3D::Reader() const { return reader_; }
             Const shallow_copy() const {
-                return Const(this->reader_);
+                return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Odometry3D::Reader reader) {
                 auto message = std::make_unique<capnp::MallocMessageBuilder>();
@@ -69,17 +73,17 @@ public:
             }
         using List = rpp::ListConst<Odometry3D>;
 
-            inline Pose3D::Const pose() const { return Pose3D::Const(reader_.getPose()); }
+            inline ::rpp_schema::rpp_common::Pose3D::Const pose() const { return ::rpp_schema::rpp_common::Pose3D::Const(reader_.getPose(), message_lifetime_); }
 
 
-            inline Twist3D::Const twist() const { return Twist3D::Const(reader_.getTwist()); }
+            inline ::rpp_schema::rpp_common::Twist3D::Const twist() const { return ::rpp_schema::rpp_common::Twist3D::Const(reader_.getTwist(), message_lifetime_); }
 
 
             Odometry3D_Native as_struct() const {
 
                 return Odometry3D_Native{
-                    Pose3D::Const(reader_.getPose()).as_struct(),
-                    Twist3D::Const(reader_.getTwist()).as_struct()
+                    ::rpp_schema::rpp_common::Pose3D::Const(reader_.getPose()).as_struct(),
+                    ::rpp_schema::rpp_common::Twist3D::Const(reader_.getTwist()).as_struct()
                 };
             }
     };
@@ -111,17 +115,17 @@ public:
         Odometry3D(const Odometry3D&) = delete;
         Odometry3D& operator=(const Odometry3D&) = delete;
 
-        Pose3D pose() { return Pose3D(builder_.getPose()); }
-        Pose3D::Const pose() const { return Pose3D::Const(builder_.asReader().getPose()); }
+        ::rpp_schema::rpp_common::Pose3D pose() { return ::rpp_schema::rpp_common::Pose3D(builder_.getPose()); }
+        ::rpp_schema::rpp_common::Pose3D::Const pose() const { return ::rpp_schema::rpp_common::Pose3D::Const(builder_.asReader().getPose()); }
 
-        Twist3D twist() { return Twist3D(builder_.getTwist()); }
-        Twist3D::Const twist() const { return Twist3D::Const(builder_.asReader().getTwist()); }
+        ::rpp_schema::rpp_common::Twist3D twist() { return ::rpp_schema::rpp_common::Twist3D(builder_.getTwist()); }
+        ::rpp_schema::rpp_common::Twist3D::Const twist() const { return ::rpp_schema::rpp_common::Twist3D::Const(builder_.asReader().getTwist()); }
 
         Odometry3D_Native as_struct() const {
 
             return Odometry3D_Native{
-                Pose3D::Const(builder_.asReader().getPose()).as_struct(),
-                Twist3D::Const(builder_.asReader().getTwist()).as_struct()
+                ::rpp_schema::rpp_common::Pose3D::Const(builder_.asReader().getPose()).as_struct(),
+                ::rpp_schema::rpp_common::Twist3D::Const(builder_.asReader().getTwist()).as_struct()
             };
         }
 

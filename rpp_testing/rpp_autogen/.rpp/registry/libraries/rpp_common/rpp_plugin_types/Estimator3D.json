@@ -62,5 +62,5 @@
   "Id": "rpp_common__estimator3_d",
   "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_common.Estimator3D.Estimator3D'>",
   "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_common/estimator.capnp",
-  "RegistryPluginTypeFileId": "dc068c96e8d1f566"
+  "RegistryPluginTypeFileId": "da460ade66338b66"
 }

@@ -1,6 +1,7 @@
 
 #pragma once
 
+#include "TestInterfaceAll.hpp"
 #include <memory>
 #include <stdexcept>
 #include <string>

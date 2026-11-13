@@ -1,4 +1,5 @@
 #pragma once
+#include "DisturbanceGenerator3D.hpp"
 #include <functional>
 #include <memory>
 #include <optional>
@@ -130,8 +131,9 @@ public:
         request.setDt(dt);
 
         auto response = request.send().wait(io_->waitScope);
+        auto response_owner = std::make_shared<decltype(response)>(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=step.", info_.name.c_str());
-        return Pose3D::Const(response.getState_disturbed());
+        return Pose3D::Const(response_owner->getState_disturbed(), response_owner);
         }
         return executor_->get().call([this, &state, &dt](kj::AsyncIoContext& io) {
         RPP_LOG_DEBUG(*logger_, "Calling component: component=%s method=step.",
@@ -141,8 +143,9 @@ public:
         request.setDt(dt);
 
         auto response = request.send().wait(io.waitScope);
+        auto response_owner = executor_->get().retain(std::move(response));
         RPP_LOG_DEBUG(*logger_, "Component call completed: component=%s method=step.", info_.name.c_str());
-        return Pose3D::Const(response.getState_disturbed());
+        return Pose3D::Const(response_owner->getState_disturbed(), response_owner);
         });
     }
 
