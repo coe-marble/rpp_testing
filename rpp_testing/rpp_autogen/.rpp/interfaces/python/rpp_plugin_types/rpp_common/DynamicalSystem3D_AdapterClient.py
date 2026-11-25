@@ -8,7 +8,7 @@ from rpp_py.adapter_info import AdapterClientParams, AdapterClientInfo
 from rpp_py.logger import RppLogger
 from rpp_plugin_types.rpp_common.DynamicalSystem3D import DynamicalSystem3D
 from rpp_py.plugin_runtime import RuntimeConstants
-from rpp_py.lifecycle import CallbackResult, DeactivationResult
+from rpp_py.lifecycle import CallbackResult
 import asyncio
 from rpp_schema.rpp_common.Pose3D import Pose3D as _Pose3D
 

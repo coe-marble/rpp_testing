@@ -2,7 +2,7 @@
 from typing import List, Dict, Any, Tuple
 from rpp_py.plugin import Plugin
 from rpp_py.context import ComponentContext
-from rpp_py.lifecycle import CallbackResult, DeactivationResult
+from rpp_py.lifecycle import CallbackResult
 import inspect
 from rpp_schema.rpp_common.Pose2D import Pose2D as _Pose2D
 

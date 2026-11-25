@@ -8,7 +8,7 @@ from rpp_py.adapter_info import AdapterClientParams, AdapterClientInfo
 from rpp_py.logger import RppLogger
 from rpp_plugin_types.rpp_testing.TestInterfaceAll import TestInterfaceAll
 from rpp_py.plugin_runtime import RuntimeConstants
-from rpp_py.lifecycle import CallbackResult, DeactivationResult
+from rpp_py.lifecycle import CallbackResult
 import asyncio
 from rpp_schema.rpp_testing.TestStruct1 import TestStruct1 as _TestStruct1
 from rpp_schema.rpp_testing.TestStruct2 import TestStruct2 as _TestStruct2
