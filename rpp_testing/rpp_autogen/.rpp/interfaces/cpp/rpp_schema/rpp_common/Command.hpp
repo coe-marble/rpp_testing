@@ -1,4 +1,5 @@
 #pragma once
+#include <rpp_cpp/list_definitions.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -16,6 +17,12 @@ namespace rpp_schema::rpp_common{
 struct Command_Native {
 
     std::vector<double> data;
+
+    static constexpr const char* struct_name() noexcept { return "Command"; }
+    template<typename Visitor>
+    void reflect(Visitor&& visitor) {
+        visitor("data", data);
+    }
 };
 
 
@@ -61,7 +68,9 @@ public:
                 return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Command::Reader reader) {
-                auto message = std::make_unique<capnp::MallocMessageBuilder>();
+                // The reader can include child data and fields from newer schemas.
+                const auto words = rpp::message_segment_words(reader.totalSize().wordCount);
+                auto message = std::make_unique<capnp::MallocMessageBuilder>(words);
                 message->setRoot(reader);
                 schema::rpp_common::Command::Reader copied_reader =
                     message->getRoot<schema::rpp_common::Command>();
@@ -102,8 +111,12 @@ public:
     public:
         using IsRppStruct = void;
         using CapnpType = schema::rpp_common::Command;
-        Command()
-            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>()),
+        Command() : Command(0) {}
+        // The hint includes the root pointer and any anticipated child storage.
+        explicit Command(std::uint64_t initial_segment_words)
+            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>(
+                  rpp::message_segment_words(
+                      default_content_words(), initial_segment_words))),
               builder_(msg_builder_->initRoot<schema::rpp_common::Command>()) {}
         Command(schema::rpp_common::Command::Builder builder)
             : msg_builder_(nullptr), builder_(builder) {}
@@ -116,6 +129,12 @@ public:
         // Delete copy constructor and copy assignment operator
         Command(const Command&) = delete;
         Command& operator=(const Command&) = delete;
+
+    private:
+        static std::uint64_t default_content_words() {
+            return std::uint64_t{capnp::sizeInWords<CapnpType>()};
+        }
+    public:
 
         rpp::List<double> data() { return rpp::List<double>{builder_.getData(),
                 [builder = builder_](size_t new_size) mutable {

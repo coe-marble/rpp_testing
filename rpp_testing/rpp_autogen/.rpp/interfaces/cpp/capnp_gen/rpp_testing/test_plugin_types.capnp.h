@@ -15,48 +15,52 @@
 #error "Version mismatch between generated code and library headers.  You must use the same version of the Cap'n Proto compiler and library."
 #endif
 
-#include "capnp_gen/rpp_common/msgs.capnp.h"
+#include "../rpp_common/msgs.capnp.h"
 
 CAPNP_BEGIN_HEADER
 
 namespace capnp {
 namespace schemas {
 
-CAPNP_DECLARE_SCHEMA(9462df11569b601c);
-CAPNP_DECLARE_SCHEMA(8046252a3a3ee67e);
-CAPNP_DECLARE_SCHEMA(cc9bff6c42827f24);
-CAPNP_DECLARE_SCHEMA(dfcaf0b45f3950e9);
-CAPNP_DECLARE_SCHEMA(f2b8543339d2ed9e);
-CAPNP_DECLARE_SCHEMA(a4d9ecca72de15b8);
-CAPNP_DECLARE_SCHEMA(829dc0eb4777b430);
-CAPNP_DECLARE_SCHEMA(b103fa47b1630994);
-CAPNP_DECLARE_SCHEMA(e0fac99f523d0e2b);
-CAPNP_DECLARE_SCHEMA(96edd7b1561f2fc0);
-CAPNP_DECLARE_SCHEMA(8c5d2dc08c5c5536);
-CAPNP_DECLARE_SCHEMA(cf701f24f50faaa4);
-CAPNP_DECLARE_SCHEMA(829200ca96b3c578);
-CAPNP_DECLARE_SCHEMA(ca39c2ae1a756569);
-CAPNP_DECLARE_SCHEMA(ff95cf975f966a9f);
-CAPNP_DECLARE_SCHEMA(e2652cbb7b0dd96d);
-CAPNP_DECLARE_SCHEMA(bf4bc4868257919a);
-CAPNP_DECLARE_SCHEMA(b8f9c7071241a731);
-CAPNP_DECLARE_SCHEMA(b8c91f30c6498338);
-CAPNP_DECLARE_SCHEMA(e6aa4620030fd101);
-CAPNP_DECLARE_SCHEMA(9208502d6beaef14);
-CAPNP_DECLARE_SCHEMA(dd860fa2f3b5dff7);
-CAPNP_DECLARE_SCHEMA(ab7f79539884e6ee);
-CAPNP_DECLARE_SCHEMA(f333e6f6c10d47c5);
-CAPNP_DECLARE_SCHEMA(d66adb30689fca9b);
-CAPNP_DECLARE_SCHEMA(ae0634d1b92b3720);
-CAPNP_DECLARE_SCHEMA(9ab5e151c407945e);
-CAPNP_DECLARE_SCHEMA(e0ed4ce386f5411e);
-CAPNP_DECLARE_SCHEMA(cb77e42fa3412cbc);
-CAPNP_DECLARE_SCHEMA(8132c0b15fe4745c);
-CAPNP_DECLARE_SCHEMA(df4f81c0d790a9cc);
-CAPNP_DECLARE_SCHEMA(92e140ed724f6b86);
-CAPNP_DECLARE_SCHEMA(ae529a1c1eceb78d);
-CAPNP_DECLARE_SCHEMA(adb565dca311dbe9);
-CAPNP_DECLARE_SCHEMA(aca1f54ffb71580e);
+CAPNP_DECLARE_SCHEMA(8d552dac439ce00b);
+CAPNP_DECLARE_SCHEMA(f7f2a5e41547be9f);
+CAPNP_DECLARE_SCHEMA(e5ba3c935fd3823e);
+CAPNP_DECLARE_SCHEMA(dafb6585ee31fe08);
+CAPNP_DECLARE_SCHEMA(cfc1f3ba103ab1eb);
+CAPNP_DECLARE_SCHEMA(f0e90c6cd6d9f88a);
+CAPNP_DECLARE_SCHEMA(c882eda51ad46f52);
+CAPNP_DECLARE_SCHEMA(a89c6881a02da851);
+CAPNP_DECLARE_SCHEMA(e8234df87240025e);
+CAPNP_DECLARE_SCHEMA(9820f7866b052bee);
+CAPNP_DECLARE_SCHEMA(d5a4d69f8ca1d8e7);
+CAPNP_DECLARE_SCHEMA(84ec18807dd761d3);
+CAPNP_DECLARE_SCHEMA(c23bb655b10ffb45);
+CAPNP_DECLARE_SCHEMA(8e2ab018b7a1dd5e);
+CAPNP_DECLARE_SCHEMA(e318b4c878dee790);
+CAPNP_DECLARE_SCHEMA(b6cc066ef45d5767);
+CAPNP_DECLARE_SCHEMA(a238f93fef7a04db);
+CAPNP_DECLARE_SCHEMA(a053e65fa99db042);
+CAPNP_DECLARE_SCHEMA(cf77b73276d9369d);
+CAPNP_DECLARE_SCHEMA(fcb62a331af2a04f);
+CAPNP_DECLARE_SCHEMA(f60191dbf43380e5);
+CAPNP_DECLARE_SCHEMA(8f36589921a3c986);
+CAPNP_DECLARE_SCHEMA(c145d2afef83fafd);
+CAPNP_DECLARE_SCHEMA(be144de93fbb3778);
+CAPNP_DECLARE_SCHEMA(b09ec78fd8d39d93);
+CAPNP_DECLARE_SCHEMA(b9fee6d1ec28ed61);
+CAPNP_DECLARE_SCHEMA(905e647e58245499);
+CAPNP_DECLARE_SCHEMA(d9a0df03a35f08a4);
+CAPNP_DECLARE_SCHEMA(871091cafaff7a84);
+CAPNP_DECLARE_SCHEMA(b608c79b52d2a903);
+CAPNP_DECLARE_SCHEMA(e8e9216dcee79fef);
+CAPNP_DECLARE_SCHEMA(aa047d9f80046a0d);
+CAPNP_DECLARE_SCHEMA(b3b65bee0a0cc67a);
+CAPNP_DECLARE_SCHEMA(9d012b6b05f1a554);
+CAPNP_DECLARE_SCHEMA(e80f298a8a7fd343);
+CAPNP_DECLARE_SCHEMA(cf573d02b0c6a5cf);
+CAPNP_DECLARE_SCHEMA(83d85854cc1c5ff1);
+CAPNP_DECLARE_SCHEMA(b8f1fa3488d3da21);
+CAPNP_DECLARE_SCHEMA(b2dd8add4db49ff7);
 
 }  // namespace schemas
 }  // namespace capnp
@@ -80,7 +84,7 @@ struct Controller {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(9462df11569b601c)
+    CAPNP_DECLARE_INTERFACE_HEADER(8d552dac439ce00b)
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
     static const ::capnp::_::RawBrandedSchema::Dependency brandDependencies[];
@@ -99,7 +103,7 @@ struct Controller<State, Command>::StepParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(8046252a3a3ee67e, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(f7f2a5e41547be9f, 1, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -118,7 +122,7 @@ struct Controller<State, Command>::StepResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(cc9bff6c42827f24, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(e5ba3c935fd3823e, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -137,7 +141,7 @@ struct Controller<State, Command>::ValidateParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(dfcaf0b45f3950e9, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(dafb6585ee31fe08, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -156,7 +160,7 @@ struct Controller<State, Command>::ValidateResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f2b8543339d2ed9e, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(cfc1f3ba103ab1eb, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -186,7 +190,7 @@ struct DisturbanceGenerator {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(a4d9ecca72de15b8)
+    CAPNP_DECLARE_INTERFACE_HEADER(f0e90c6cd6d9f88a)
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
     static const ::capnp::_::RawBrandedSchema::Dependency brandDependencies[];
@@ -205,7 +209,7 @@ struct DisturbanceGenerator<State>::StepParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(829dc0eb4777b430, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(c882eda51ad46f52, 1, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -224,7 +228,7 @@ struct DisturbanceGenerator<State>::StepResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b103fa47b1630994, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(a89c6881a02da851, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -243,7 +247,7 @@ struct DisturbanceGenerator<State>::ValidateParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e0fac99f523d0e2b, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(e8234df87240025e, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -262,7 +266,7 @@ struct DisturbanceGenerator<State>::ValidateResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(96edd7b1561f2fc0, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(9820f7866b052bee, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -281,7 +285,7 @@ struct DisturbanceGenerator<State>::SetDataParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(8c5d2dc08c5c5536, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(d5a4d69f8ca1d8e7, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -300,7 +304,7 @@ struct DisturbanceGenerator<State>::SetDataResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(cf701f24f50faaa4, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(84ec18807dd761d3, 1, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -319,7 +323,7 @@ struct DisturbanceGenerator<State>::GetDataParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(829200ca96b3c578, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(c23bb655b10ffb45, 0, 0)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -338,7 +342,7 @@ struct DisturbanceGenerator<State>::GetDataResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ca39c2ae1a756569, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(8e2ab018b7a1dd5e, 0, 1)
     #if !CAPNP_LITE
     static const ::capnp::_::RawBrandedSchema::Scope brandScopes[];
     static const ::capnp::_::RawBrandedSchema::Binding brandBindings[];
@@ -359,7 +363,7 @@ struct DisturbanceGenerator2D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(ff95cf975f966a9f)
+    CAPNP_DECLARE_INTERFACE_HEADER(e318b4c878dee790)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -376,7 +380,7 @@ struct MotionController2D {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(e2652cbb7b0dd96d)
+    CAPNP_DECLARE_INTERFACE_HEADER(b6cc066ef45d5767)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -390,7 +394,7 @@ struct TestStruct1 {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(bf4bc4868257919a, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(a238f93fef7a04db, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -405,7 +409,7 @@ struct TestStruct2 {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b8f9c7071241a731, 2, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(a053e65fa99db042, 2, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -439,7 +443,7 @@ struct TestInterfaceAll {
 
   #if !CAPNP_LITE
   struct _capnpPrivate {
-    CAPNP_DECLARE_INTERFACE_HEADER(b8c91f30c6498338)
+    CAPNP_DECLARE_INTERFACE_HEADER(cf77b73276d9369d)
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
   };
   #endif  // !CAPNP_LITE
@@ -453,7 +457,7 @@ struct TestInterfaceAll::FuncEmptyParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e6aa4620030fd101, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(fcb62a331af2a04f, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -468,7 +472,7 @@ struct TestInterfaceAll::FuncEmptyResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9208502d6beaef14, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(f60191dbf43380e5, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -483,7 +487,7 @@ struct TestInterfaceAll::FuncWithSimpleParamsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(dd860fa2f3b5dff7, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(8f36589921a3c986, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -498,7 +502,7 @@ struct TestInterfaceAll::FuncWithSimpleParamsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ab7f79539884e6ee, 1, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(c145d2afef83fafd, 1, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -513,7 +517,7 @@ struct TestInterfaceAll::FuncWithStructParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f333e6f6c10d47c5, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(be144de93fbb3778, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -528,7 +532,7 @@ struct TestInterfaceAll::FuncWithStructParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(d66adb30689fca9b, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(b09ec78fd8d39d93, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -543,7 +547,7 @@ struct TestInterfaceAll::FuncWithListParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ae0634d1b92b3720, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(b9fee6d1ec28ed61, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -558,7 +562,7 @@ struct TestInterfaceAll::FuncWithListParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9ab5e151c407945e, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(905e647e58245499, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -573,7 +577,7 @@ struct TestInterfaceAll::FuncWithListOfStructParamParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(e0ed4ce386f5411e, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(d9a0df03a35f08a4, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -588,7 +592,7 @@ struct TestInterfaceAll::FuncWithListOfStructParamResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(cb77e42fa3412cbc, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(871091cafaff7a84, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -603,7 +607,7 @@ struct TestInterfaceAll::FuncWithMultipleSimpleReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(8132c0b15fe4745c, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(b608c79b52d2a903, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -618,7 +622,7 @@ struct TestInterfaceAll::FuncWithMultipleSimpleReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(df4f81c0d790a9cc, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(e8e9216dcee79fef, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -633,7 +637,7 @@ struct TestInterfaceAll::FuncWithMultipleStructReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(92e140ed724f6b86, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(aa047d9f80046a0d, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -648,7 +652,7 @@ struct TestInterfaceAll::FuncWithMultipleStructReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ae529a1c1eceb78d, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(b3b65bee0a0cc67a, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -663,7 +667,7 @@ struct TestInterfaceAll::FuncWithMultipleListReturnsParams {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(adb565dca311dbe9, 0, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(9d012b6b05f1a554, 0, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -678,7 +682,67 @@ struct TestInterfaceAll::FuncWithMultipleListReturnsResults {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(aca1f54ffb71580e, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(e80f298a8a7fd343, 0, 2)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct AllocationFixedSample {
+  AllocationFixedSample() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(cf573d02b0c6a5cf, 6, 0)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct AllocationEnvelope {
+  AllocationEnvelope() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(83d85854cc1c5ff1, 0, 5)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct AllocationEvolvedSample {
+  AllocationEvolvedSample() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(b8f1fa3488d3da21, 6, 2)
+    #if !CAPNP_LITE
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
+    #endif  // !CAPNP_LITE
+  };
+};
+
+struct AllocationHintedSample {
+  AllocationHintedSample() = delete;
+
+  class Reader;
+  class Builder;
+  class Pipeline;
+
+  struct _capnpPrivate {
+    CAPNP_DECLARE_STRUCT_HEADER(b2dd8add4db49ff7, 0, 5)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -3616,6 +3680,475 @@ private:
 };
 #endif  // !CAPNP_LITE
 
+class AllocationFixedSample::Reader {
+public:
+  typedef AllocationFixedSample Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
+  }
+#endif  // !CAPNP_LITE
+
+  inline double getA() const;
+
+  inline double getB() const;
+
+  inline double getC() const;
+
+  inline double getD() const;
+
+  inline double getE() const;
+
+  inline double getF() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class AllocationFixedSample::Builder {
+public:
+  typedef AllocationFixedSample Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline double getA();
+  inline void setA(double value);
+
+  inline double getB();
+  inline void setB(double value);
+
+  inline double getC();
+  inline void setC(double value);
+
+  inline double getD();
+  inline void setD(double value);
+
+  inline double getE();
+  inline void setE(double value);
+
+  inline double getF();
+  inline void setF(double value);
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class AllocationFixedSample::Pipeline {
+public:
+  typedef AllocationFixedSample Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class AllocationEnvelope::Reader {
+public:
+  typedef AllocationEnvelope Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName() const;
+  inline  ::capnp::Text::Reader getName() const;
+
+  inline bool hasPayload() const;
+  inline  ::capnp::Data::Reader getPayload() const;
+
+  inline bool hasValues() const;
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader getValues() const;
+
+  inline bool hasChild() const;
+  inline  ::schema::rpp_testing::AllocationFixedSample::Reader getChild() const;
+
+  inline bool hasHistory() const;
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader getHistory() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class AllocationEnvelope::Builder {
+public:
+  typedef AllocationEnvelope Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasName();
+  inline  ::capnp::Text::Builder getName();
+  inline void setName( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initName(unsigned int size);
+  inline void adoptName(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownName();
+
+  inline bool hasPayload();
+  inline  ::capnp::Data::Builder getPayload();
+  inline void setPayload( ::capnp::Data::Reader value);
+  inline  ::capnp::Data::Builder initPayload(unsigned int size);
+  inline void adoptPayload(::capnp::Orphan< ::capnp::Data>&& value);
+  inline ::capnp::Orphan< ::capnp::Data> disownPayload();
+
+  inline bool hasValues();
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder getValues();
+  inline void setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value);
+  inline void setValues(::kj::ArrayPtr<const double> value);
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder initValues(unsigned int size);
+  inline void adoptValues(::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value);
+  inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> disownValues();
+
+  inline bool hasChild();
+  inline  ::schema::rpp_testing::AllocationFixedSample::Builder getChild();
+  inline void setChild( ::schema::rpp_testing::AllocationFixedSample::Reader value);
+  inline  ::schema::rpp_testing::AllocationFixedSample::Builder initChild();
+  inline void adoptChild(::capnp::Orphan< ::schema::rpp_testing::AllocationFixedSample>&& value);
+  inline ::capnp::Orphan< ::schema::rpp_testing::AllocationFixedSample> disownChild();
+
+  inline bool hasHistory();
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder getHistory();
+  inline void setHistory( ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader value);
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder initHistory(unsigned int size);
+  inline void adoptHistory(::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>> disownHistory();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class AllocationEnvelope::Pipeline {
+public:
+  typedef AllocationEnvelope Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+  inline  ::schema::rpp_testing::AllocationFixedSample::Pipeline getChild();
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class AllocationEvolvedSample::Reader {
+public:
+  typedef AllocationEvolvedSample Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
+  }
+#endif  // !CAPNP_LITE
+
+  inline double getA() const;
+
+  inline double getB() const;
+
+  inline double getC() const;
+
+  inline double getD() const;
+
+  inline double getE() const;
+
+  inline double getF() const;
+
+  inline bool hasName() const;
+  inline  ::capnp::Text::Reader getName() const;
+
+  inline bool hasValues() const;
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader getValues() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class AllocationEvolvedSample::Builder {
+public:
+  typedef AllocationEvolvedSample Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline double getA();
+  inline void setA(double value);
+
+  inline double getB();
+  inline void setB(double value);
+
+  inline double getC();
+  inline void setC(double value);
+
+  inline double getD();
+  inline void setD(double value);
+
+  inline double getE();
+  inline void setE(double value);
+
+  inline double getF();
+  inline void setF(double value);
+
+  inline bool hasName();
+  inline  ::capnp::Text::Builder getName();
+  inline void setName( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initName(unsigned int size);
+  inline void adoptName(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownName();
+
+  inline bool hasValues();
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder getValues();
+  inline void setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value);
+  inline void setValues(::kj::ArrayPtr<const double> value);
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder initValues(unsigned int size);
+  inline void adoptValues(::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value);
+  inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> disownValues();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class AllocationEvolvedSample::Pipeline {
+public:
+  typedef AllocationEvolvedSample Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
+class AllocationHintedSample::Reader {
+public:
+  typedef AllocationHintedSample Reads;
+
+  Reader() = default;
+  inline explicit Reader(::capnp::_::StructReader base): _reader(base) {}
+
+  inline ::capnp::MessageSize totalSize() const {
+    return _reader.totalSize().asPublic();
+  }
+
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const {
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
+  }
+#endif  // !CAPNP_LITE
+
+  inline bool hasValues() const;
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader getValues() const;
+
+  inline bool hasName() const;
+  inline  ::capnp::Text::Reader getName() const;
+
+  inline bool hasPayload() const;
+  inline  ::capnp::Data::Reader getPayload() const;
+
+  inline bool hasFlags() const;
+  inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Reader getFlags() const;
+
+  inline bool hasHistory() const;
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader getHistory() const;
+
+private:
+  ::capnp::_::StructReader _reader;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::List;
+  friend class ::capnp::MessageBuilder;
+  friend class ::capnp::Orphanage;
+};
+
+class AllocationHintedSample::Builder {
+public:
+  typedef AllocationHintedSample Builds;
+
+  Builder() = delete;  // Deleted to discourage incorrect usage.
+                       // You can explicitly initialize to nullptr instead.
+  inline Builder(decltype(nullptr)) {}
+  inline explicit Builder(::capnp::_::StructBuilder base): _builder(base) {}
+  inline operator Reader() const { return Reader(_builder.asReader()); }
+  inline Reader asReader() const { return *this; }
+
+  inline ::capnp::MessageSize totalSize() const { return asReader().totalSize(); }
+#if !CAPNP_LITE
+  inline ::kj::StringTree toString() const { return asReader().toString(); }
+#endif  // !CAPNP_LITE
+
+  inline bool hasValues();
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder getValues();
+  inline void setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value);
+  inline void setValues(::kj::ArrayPtr<const double> value);
+  inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder initValues(unsigned int size);
+  inline void adoptValues(::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value);
+  inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> disownValues();
+
+  inline bool hasName();
+  inline  ::capnp::Text::Builder getName();
+  inline void setName( ::capnp::Text::Reader value);
+  inline  ::capnp::Text::Builder initName(unsigned int size);
+  inline void adoptName(::capnp::Orphan< ::capnp::Text>&& value);
+  inline ::capnp::Orphan< ::capnp::Text> disownName();
+
+  inline bool hasPayload();
+  inline  ::capnp::Data::Builder getPayload();
+  inline void setPayload( ::capnp::Data::Reader value);
+  inline  ::capnp::Data::Builder initPayload(unsigned int size);
+  inline void adoptPayload(::capnp::Orphan< ::capnp::Data>&& value);
+  inline ::capnp::Orphan< ::capnp::Data> disownPayload();
+
+  inline bool hasFlags();
+  inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Builder getFlags();
+  inline void setFlags( ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Reader value);
+  inline void setFlags(::kj::ArrayPtr<const bool> value);
+  inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Builder initFlags(unsigned int size);
+  inline void adoptFlags(::capnp::Orphan< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>&& value);
+  inline ::capnp::Orphan< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>> disownFlags();
+
+  inline bool hasHistory();
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder getHistory();
+  inline void setHistory( ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader value);
+  inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder initHistory(unsigned int size);
+  inline void adoptHistory(::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>&& value);
+  inline ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>> disownHistory();
+
+private:
+  ::capnp::_::StructBuilder _builder;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+  friend class ::capnp::Orphanage;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::_::PointerHelpers;
+};
+
+#if !CAPNP_LITE
+class AllocationHintedSample::Pipeline {
+public:
+  typedef AllocationHintedSample Pipelines;
+
+  inline Pipeline(decltype(nullptr)): _typeless(nullptr) {}
+  inline explicit Pipeline(::capnp::AnyPointer::Pipeline&& typeless)
+      : _typeless(kj::mv(typeless)) {}
+
+private:
+  ::capnp::AnyPointer::Pipeline _typeless;
+  friend class ::capnp::PipelineHook;
+  template <typename, ::capnp::Kind>
+  friend struct ::capnp::ToDynamic_;
+};
+#endif  // !CAPNP_LITE
+
 // =======================================================================================
 
 #if !CAPNP_LITE
@@ -3735,7 +4268,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::StepParams::_
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::StepParams::_capnpPrivate::brandScopes[] = {
-  { 0x9462df11569b601c, brandBindings + 0, 2, false},
+  { 0x8d552dac439ce00b, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepParams::_capnpPrivate::brandBindings[] = {
@@ -3744,7 +4277,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepPara
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::StepParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_8046252a3a3ee67e, brandScopes, nullptr,
+  &::capnp::schemas::s_f7f2a5e41547be9f, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3818,7 +4351,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::StepResults::
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::StepResults::_capnpPrivate::brandScopes[] = {
-  { 0x9462df11569b601c, brandBindings + 0, 2, false},
+  { 0x8d552dac439ce00b, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepResults::_capnpPrivate::brandBindings[] = {
@@ -3827,7 +4360,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::StepResu
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::StepResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_cc9bff6c42827f24, brandScopes, nullptr,
+  &::capnp::schemas::s_e5ba3c935fd3823e, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3901,7 +4434,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::ValidateParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::ValidateParams::_capnpPrivate::brandScopes[] = {
-  { 0x9462df11569b601c, brandBindings + 0, 2, false},
+  { 0x8d552dac439ce00b, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::ValidateParams::_capnpPrivate::brandBindings[] = {
@@ -3910,7 +4443,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::Validate
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::ValidateParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_dfcaf0b45f3950e9, brandScopes, nullptr,
+  &::capnp::schemas::s_dafb6585ee31fe08, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3948,7 +4481,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::ValidateResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::ValidateResults::_capnpPrivate::brandScopes[] = {
-  { 0x9462df11569b601c, brandBindings + 0, 2, false},
+  { 0x8d552dac439ce00b, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::ValidateResults::_capnpPrivate::brandBindings[] = {
@@ -3957,7 +4490,7 @@ const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::Validate
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::ValidateResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_f2b8543339d2ed9e, brandScopes, nullptr,
+  &::capnp::schemas::s_cfc1f3ba103ab1eb, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -3967,35 +4500,35 @@ template <typename State, typename Command>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::Controller<State, Command>::StepParams, typename  ::schema::rpp_testing::Controller<State, Command>::StepResults>)
 Controller<State, Command>::Client::stepRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::Controller<State, Command>::StepParams, typename  ::schema::rpp_testing::Controller<State, Command>::StepResults>(
-      0x9462df11569b601cull, 0, sizeHint, {false});
+      0x8d552dac439ce00bull, 0, sizeHint, {false});
 }
 template <typename State, typename Command>
 ::kj::Promise<void> Controller<State, Command>::Server::step(StepContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:Controller", "step",
-      0x9462df11569b601cull, 0);
+      "rpp_testing/test_plugin_types.capnp:Controller", "step",
+      0x8d552dac439ce00bull, 0);
 }
 template <typename State, typename Command>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::Controller<State, Command>::ValidateParams, typename  ::schema::rpp_testing::Controller<State, Command>::ValidateResults>)
 Controller<State, Command>::Client::validateRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::Controller<State, Command>::ValidateParams, typename  ::schema::rpp_testing::Controller<State, Command>::ValidateResults>(
-      0x9462df11569b601cull, 1, sizeHint, {true});
+      0x8d552dac439ce00bull, 1, sizeHint, {true});
 }
 template <typename State, typename Command>
 ::kj::Promise<void> Controller<State, Command>::Server::validate(ValidateContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:Controller", "validate",
-      0x9462df11569b601cull, 1);
+      "rpp_testing/test_plugin_types.capnp:Controller", "validate",
+      0x8d552dac439ce00bull, 1);
 }
 template <typename State, typename Command>
 ::capnp::Capability::Server::DispatchCallResult Controller<State, Command>::Server::dispatchCall(
     uint64_t interfaceId, uint16_t methodId,
     ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context) {
   switch (interfaceId) {
-    case 0x9462df11569b601cull:
+    case 0x8d552dac439ce00bull:
       return dispatchCallInternal(methodId, context);
     default:
-      return internalUnimplemented("test_plugin_types.capnp:Controller", interfaceId);
+      return internalUnimplemented("rpp_testing/test_plugin_types.capnp:Controller", interfaceId);
   }
 }
 template <typename State, typename Command>
@@ -4020,8 +4553,8 @@ template <typename State, typename Command>
     default:
       (void)context;
       return ::capnp::Capability::Server::internalUnimplemented(
-          "test_plugin_types.capnp:Controller",
-          0x9462df11569b601cull, methodId);
+          "rpp_testing/test_plugin_types.capnp:Controller",
+          0x8d552dac439ce00bull, methodId);
   }
 }
 #endif  // !CAPNP_LITE
@@ -4036,7 +4569,7 @@ constexpr ::capnp::_::RawSchema const* Controller<State, Command>::_capnpPrivate
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Scope Controller<State, Command>::_capnpPrivate::brandScopes[] = {
-  { 0x9462df11569b601c, brandBindings + 0, 2, false},
+  { 0x8d552dac439ce00b, brandBindings + 0, 2, false},
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema::Binding Controller<State, Command>::_capnpPrivate::brandBindings[] = {
@@ -4052,7 +4585,7 @@ const ::capnp::_::RawBrandedSchema::Dependency Controller<State, Command>::_capn
 };
 template <typename State, typename Command>
 const ::capnp::_::RawBrandedSchema Controller<State, Command>::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_9462df11569b601c, brandScopes, brandDependencies,
+  &::capnp::schemas::s_8d552dac439ce00b, brandScopes, brandDependencies,
   1, 4, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4174,7 +4707,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::StepParams::
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::StepParams::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepParams::_capnpPrivate::brandBindings[] = {
@@ -4182,7 +4715,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepPar
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::StepParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_829dc0eb4777b430, brandScopes, nullptr,
+  &::capnp::schemas::s_c882eda51ad46f52, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4256,7 +4789,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::StepResults:
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::StepResults::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepResults::_capnpPrivate::brandBindings[] = {
@@ -4264,7 +4797,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::StepRes
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::StepResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_b103fa47b1630994, brandScopes, nullptr,
+  &::capnp::schemas::s_a89c6881a02da851, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4338,7 +4871,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::ValidatePara
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::brandBindings[] = {
@@ -4346,7 +4879,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::Validat
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::ValidateParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_e0fac99f523d0e2b, brandScopes, nullptr,
+  &::capnp::schemas::s_e8234df87240025e, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4384,7 +4917,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::ValidateResu
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::brandBindings[] = {
@@ -4392,7 +4925,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::Validat
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::ValidateResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_96edd7b1561f2fc0, brandScopes, nullptr,
+  &::capnp::schemas::s_9820f7866b052bee, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4455,7 +4988,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::SetDataParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::brandBindings[] = {
@@ -4463,7 +4996,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::SetDataParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_8c5d2dc08c5c5536, brandScopes, nullptr,
+  &::capnp::schemas::s_d5a4d69f8ca1d8e7, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4501,7 +5034,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::SetDataResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::brandBindings[] = {
@@ -4509,7 +5042,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::SetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::SetDataResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_cf701f24f50faaa4, brandScopes, nullptr,
+  &::capnp::schemas::s_84ec18807dd761d3, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4530,7 +5063,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::GetDataParam
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::brandBindings[] = {
@@ -4538,7 +5071,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::GetDataParams::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_829200ca96b3c578, brandScopes, nullptr,
+  &::capnp::schemas::s_c23bb655b10ffb45, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4601,7 +5134,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::GetDataResul
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::brandBindings[] = {
@@ -4609,7 +5142,7 @@ const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::GetData
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::GetDataResults::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_ca39c2ae1a756569, brandScopes, nullptr,
+  &::capnp::schemas::s_8e2ab018b7a1dd5e, brandScopes, nullptr,
   1, 0, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -4619,59 +5152,59 @@ template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepResults>)
 DisturbanceGenerator<State>::Client::stepRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::StepResults>(
-      0xa4d9ecca72de15b8ull, 0, sizeHint, {false});
+      0xf0e90c6cd6d9f88aull, 0, sizeHint, {false});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::step(StepContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:DisturbanceGenerator", "step",
-      0xa4d9ecca72de15b8ull, 0);
+      "rpp_testing/test_plugin_types.capnp:DisturbanceGenerator", "step",
+      0xf0e90c6cd6d9f88aull, 0);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateResults>)
 DisturbanceGenerator<State>::Client::validateRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::ValidateResults>(
-      0xa4d9ecca72de15b8ull, 1, sizeHint, {true});
+      0xf0e90c6cd6d9f88aull, 1, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::validate(ValidateContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:DisturbanceGenerator", "validate",
-      0xa4d9ecca72de15b8ull, 1);
+      "rpp_testing/test_plugin_types.capnp:DisturbanceGenerator", "validate",
+      0xf0e90c6cd6d9f88aull, 1);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataResults>)
 DisturbanceGenerator<State>::Client::setDataRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::SetDataResults>(
-      0xa4d9ecca72de15b8ull, 2, sizeHint, {true});
+      0xf0e90c6cd6d9f88aull, 2, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::setData(SetDataContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:DisturbanceGenerator", "setData",
-      0xa4d9ecca72de15b8ull, 2);
+      "rpp_testing/test_plugin_types.capnp:DisturbanceGenerator", "setData",
+      0xf0e90c6cd6d9f88aull, 2);
 }
 template <typename State>
 CAPNP_AUTO_IF_MSVC(::capnp::Request<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataResults>)
 DisturbanceGenerator<State>::Client::getDataRequest(::kj::Maybe< ::capnp::MessageSize> sizeHint) {
   return newCall<typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataParams, typename  ::schema::rpp_testing::DisturbanceGenerator<State>::GetDataResults>(
-      0xa4d9ecca72de15b8ull, 3, sizeHint, {true});
+      0xf0e90c6cd6d9f88aull, 3, sizeHint, {true});
 }
 template <typename State>
 ::kj::Promise<void> DisturbanceGenerator<State>::Server::getData(GetDataContext) {
   return ::capnp::Capability::Server::internalUnimplemented(
-      "test_plugin_types.capnp:DisturbanceGenerator", "getData",
-      0xa4d9ecca72de15b8ull, 3);
+      "rpp_testing/test_plugin_types.capnp:DisturbanceGenerator", "getData",
+      0xf0e90c6cd6d9f88aull, 3);
 }
 template <typename State>
 ::capnp::Capability::Server::DispatchCallResult DisturbanceGenerator<State>::Server::dispatchCall(
     uint64_t interfaceId, uint16_t methodId,
     ::capnp::CallContext< ::capnp::AnyPointer, ::capnp::AnyPointer> context) {
   switch (interfaceId) {
-    case 0xa4d9ecca72de15b8ull:
+    case 0xf0e90c6cd6d9f88aull:
       return dispatchCallInternal(methodId, context);
     default:
-      return internalUnimplemented("test_plugin_types.capnp:DisturbanceGenerator", interfaceId);
+      return internalUnimplemented("rpp_testing/test_plugin_types.capnp:DisturbanceGenerator", interfaceId);
   }
 }
 template <typename State>
@@ -4710,8 +5243,8 @@ template <typename State>
     default:
       (void)context;
       return ::capnp::Capability::Server::internalUnimplemented(
-          "test_plugin_types.capnp:DisturbanceGenerator",
-          0xa4d9ecca72de15b8ull, methodId);
+          "rpp_testing/test_plugin_types.capnp:DisturbanceGenerator",
+          0xf0e90c6cd6d9f88aull, methodId);
   }
 }
 #endif  // !CAPNP_LITE
@@ -4726,7 +5259,7 @@ constexpr ::capnp::_::RawSchema const* DisturbanceGenerator<State>::_capnpPrivat
 #endif  // !CAPNP_NEED_REDUNDANT_CONSTEXPR_DECL
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Scope DisturbanceGenerator<State>::_capnpPrivate::brandScopes[] = {
-  { 0xa4d9ecca72de15b8, brandBindings + 0, 1, false},
+  { 0xf0e90c6cd6d9f88a, brandBindings + 0, 1, false},
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema::Binding DisturbanceGenerator<State>::_capnpPrivate::brandBindings[] = {
@@ -4745,7 +5278,7 @@ const ::capnp::_::RawBrandedSchema::Dependency DisturbanceGenerator<State>::_cap
 };
 template <typename State>
 const ::capnp::_::RawBrandedSchema DisturbanceGenerator<State>::_capnpPrivate::specificBrand = {
-  &::capnp::schemas::s_a4d9ecca72de15b8, brandScopes, brandDependencies,
+  &::capnp::schemas::s_f0e90c6cd6d9f88a, brandScopes, brandDependencies,
   1, 8, nullptr
 };
 #endif  // !CAPNP_LITE
@@ -5444,6 +5977,603 @@ inline void TestInterfaceAll::FuncWithMultipleListReturnsResults::Builder::adopt
 inline ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::TestStruct1,  ::capnp::Kind::STRUCT>> TestInterfaceAll::FuncWithMultipleListReturnsResults::Builder::disownResultListStruct() {
   return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::TestStruct1,  ::capnp::Kind::STRUCT>>::disown(_builder.getPointerField(
       ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+
+inline double AllocationFixedSample::Reader::getA() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getA() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setA(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationFixedSample::Reader::getB() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getB() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setB(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationFixedSample::Reader::getC() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getC() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setC(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationFixedSample::Reader::getD() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getD() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setD(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationFixedSample::Reader::getE() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getE() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setE(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationFixedSample::Reader::getF() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationFixedSample::Builder::getF() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS);
+}
+inline void AllocationFixedSample::Builder::setF(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS, value);
+}
+
+inline bool AllocationEnvelope::Reader::hasName() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEnvelope::Builder::hasName() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader AllocationEnvelope::Reader::getName() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder AllocationEnvelope::Builder::getName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline void AllocationEnvelope::Builder::setName( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder AllocationEnvelope::Builder::initName(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEnvelope::Builder::adoptName(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> AllocationEnvelope::Builder::disownName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationEnvelope::Reader::hasPayload() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEnvelope::Builder::hasPayload() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Data::Reader AllocationEnvelope::Reader::getPayload() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::get(_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline  ::capnp::Data::Builder AllocationEnvelope::Builder::getPayload() {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::get(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline void AllocationEnvelope::Builder::setPayload( ::capnp::Data::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Data>::set(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Data::Builder AllocationEnvelope::Builder::initPayload(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::init(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEnvelope::Builder::adoptPayload(
+    ::capnp::Orphan< ::capnp::Data>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Data>::adopt(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Data> AllocationEnvelope::Builder::disownPayload() {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::disown(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationEnvelope::Reader::hasValues() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEnvelope::Builder::hasValues() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader AllocationEnvelope::Reader::getValues() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_reader.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationEnvelope::Builder::getValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+inline void AllocationEnvelope::Builder::setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), value);
+}
+inline void AllocationEnvelope::Builder::setValues(::kj::ArrayPtr<const double> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationEnvelope::Builder::initValues(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::init(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEnvelope::Builder::adoptValues(
+    ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> AllocationEnvelope::Builder::disownValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationEnvelope::Reader::hasChild() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEnvelope::Builder::hasChild() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS).isNull();
+}
+inline  ::schema::rpp_testing::AllocationFixedSample::Reader AllocationEnvelope::Reader::getChild() const {
+  return ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::get(_reader.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+inline  ::schema::rpp_testing::AllocationFixedSample::Builder AllocationEnvelope::Builder::getChild() {
+  return ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::get(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+#if !CAPNP_LITE
+inline  ::schema::rpp_testing::AllocationFixedSample::Pipeline AllocationEnvelope::Pipeline::getChild() {
+  return  ::schema::rpp_testing::AllocationFixedSample::Pipeline(_typeless.getPointerField(3));
+}
+#endif  // !CAPNP_LITE
+inline void AllocationEnvelope::Builder::setChild( ::schema::rpp_testing::AllocationFixedSample::Reader value) {
+  ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::set(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), value);
+}
+inline  ::schema::rpp_testing::AllocationFixedSample::Builder AllocationEnvelope::Builder::initChild() {
+  return ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::init(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+inline void AllocationEnvelope::Builder::adoptChild(
+    ::capnp::Orphan< ::schema::rpp_testing::AllocationFixedSample>&& value) {
+  ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::adopt(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::schema::rpp_testing::AllocationFixedSample> AllocationEnvelope::Builder::disownChild() {
+  return ::capnp::_::PointerHelpers< ::schema::rpp_testing::AllocationFixedSample>::disown(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationEnvelope::Reader::hasHistory() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEnvelope::Builder::hasHistory() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader AllocationEnvelope::Reader::getHistory() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::get(_reader.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder AllocationEnvelope::Builder::getHistory() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::get(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
+}
+inline void AllocationEnvelope::Builder::setHistory( ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::set(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder AllocationEnvelope::Builder::initHistory(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::init(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEnvelope::Builder::adoptHistory(
+    ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>> AllocationEnvelope::Builder::disownHistory() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::disown(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
+}
+
+inline double AllocationEvolvedSample::Reader::getA() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getA() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setA(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationEvolvedSample::Reader::getB() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getB() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setB(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationEvolvedSample::Reader::getC() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getC() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setC(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<2>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationEvolvedSample::Reader::getD() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getD() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setD(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<3>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationEvolvedSample::Reader::getE() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getE() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setE(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<4>() * ::capnp::ELEMENTS, value);
+}
+
+inline double AllocationEvolvedSample::Reader::getF() const {
+  return _reader.getDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS);
+}
+
+inline double AllocationEvolvedSample::Builder::getF() {
+  return _builder.getDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS);
+}
+inline void AllocationEvolvedSample::Builder::setF(double value) {
+  _builder.setDataField<double>(
+      ::capnp::bounded<5>() * ::capnp::ELEMENTS, value);
+}
+
+inline bool AllocationEvolvedSample::Reader::hasName() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEvolvedSample::Builder::hasName() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader AllocationEvolvedSample::Reader::getName() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder AllocationEvolvedSample::Builder::getName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline void AllocationEvolvedSample::Builder::setName( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder AllocationEvolvedSample::Builder::initName(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEvolvedSample::Builder::adoptName(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> AllocationEvolvedSample::Builder::disownName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationEvolvedSample::Reader::hasValues() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationEvolvedSample::Builder::hasValues() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader AllocationEvolvedSample::Reader::getValues() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationEvolvedSample::Builder::getValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline void AllocationEvolvedSample::Builder::setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), value);
+}
+inline void AllocationEvolvedSample::Builder::setValues(::kj::ArrayPtr<const double> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationEvolvedSample::Builder::initValues(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::init(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), size);
+}
+inline void AllocationEvolvedSample::Builder::adoptValues(
+    ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> AllocationEvolvedSample::Builder::disownValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationHintedSample::Reader::hasValues() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationHintedSample::Builder::hasValues() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader AllocationHintedSample::Reader::getValues() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationHintedSample::Builder::getValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::get(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+inline void AllocationHintedSample::Builder::setValues( ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline void AllocationHintedSample::Builder::setValues(::kj::ArrayPtr<const double> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>::Builder AllocationHintedSample::Builder::initValues(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::init(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), size);
+}
+inline void AllocationHintedSample::Builder::adoptValues(
+    ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>> AllocationHintedSample::Builder::disownValues() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<double,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationHintedSample::Reader::hasName() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationHintedSample::Builder::hasName() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Text::Reader AllocationHintedSample::Reader::getName() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_reader.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline  ::capnp::Text::Builder AllocationHintedSample::Builder::getName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::get(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+inline void AllocationHintedSample::Builder::setName( ::capnp::Text::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::set(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Text::Builder AllocationHintedSample::Builder::initName(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::init(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), size);
+}
+inline void AllocationHintedSample::Builder::adoptName(
+    ::capnp::Orphan< ::capnp::Text>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Text>::adopt(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Text> AllocationHintedSample::Builder::disownName() {
+  return ::capnp::_::PointerHelpers< ::capnp::Text>::disown(_builder.getPointerField(
+      ::capnp::bounded<1>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationHintedSample::Reader::hasPayload() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationHintedSample::Builder::hasPayload() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::Data::Reader AllocationHintedSample::Reader::getPayload() const {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::get(_reader.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+inline  ::capnp::Data::Builder AllocationHintedSample::Builder::getPayload() {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::get(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+inline void AllocationHintedSample::Builder::setPayload( ::capnp::Data::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::Data>::set(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::Data::Builder AllocationHintedSample::Builder::initPayload(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::init(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), size);
+}
+inline void AllocationHintedSample::Builder::adoptPayload(
+    ::capnp::Orphan< ::capnp::Data>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::Data>::adopt(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::Data> AllocationHintedSample::Builder::disownPayload() {
+  return ::capnp::_::PointerHelpers< ::capnp::Data>::disown(_builder.getPointerField(
+      ::capnp::bounded<2>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationHintedSample::Reader::hasFlags() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationHintedSample::Builder::hasFlags() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Reader AllocationHintedSample::Reader::getFlags() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::get(_reader.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Builder AllocationHintedSample::Builder::getFlags() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::get(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+inline void AllocationHintedSample::Builder::setFlags( ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), value);
+}
+inline void AllocationHintedSample::Builder::setFlags(::kj::ArrayPtr<const bool> value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::set(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>::Builder AllocationHintedSample::Builder::initFlags(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::init(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), size);
+}
+inline void AllocationHintedSample::Builder::adoptFlags(
+    ::capnp::Orphan< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>> AllocationHintedSample::Builder::disownFlags() {
+  return ::capnp::_::PointerHelpers< ::capnp::List<bool,  ::capnp::Kind::PRIMITIVE>>::disown(_builder.getPointerField(
+      ::capnp::bounded<3>() * ::capnp::POINTERS));
+}
+
+inline bool AllocationHintedSample::Reader::hasHistory() const {
+  return !_reader.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS).isNull();
+}
+inline bool AllocationHintedSample::Builder::hasHistory() {
+  return !_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS).isNull();
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader AllocationHintedSample::Reader::getHistory() const {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::get(_reader.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder AllocationHintedSample::Builder::getHistory() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::get(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
+}
+inline void AllocationHintedSample::Builder::setHistory( ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Reader value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::set(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), value);
+}
+inline  ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>::Builder AllocationHintedSample::Builder::initHistory(unsigned int size) {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::init(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), size);
+}
+inline void AllocationHintedSample::Builder::adoptHistory(
+    ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>&& value) {
+  ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::adopt(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS), kj::mv(value));
+}
+inline ::capnp::Orphan< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>> AllocationHintedSample::Builder::disownHistory() {
+  return ::capnp::_::PointerHelpers< ::capnp::List< ::schema::rpp_testing::AllocationFixedSample,  ::capnp::Kind::STRUCT>>::disown(_builder.getPointerField(
+      ::capnp::bounded<4>() * ::capnp::POINTERS));
 }
 
 }  // namespace

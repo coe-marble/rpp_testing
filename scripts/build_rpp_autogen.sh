@@ -64,8 +64,6 @@ else
   git clone --recurse-submodules --branch "${RPP_DEV_REF}" \
     "${RPP_DEV_REPOSITORY}" "${WORKSPACE}/src/rpp_dev"
 fi
-mkdir -p "${AUTOGEN_DIR}"
-
 source_setup() {
   # ROS/ament setup scripts intentionally inspect optional unset variables.
   set +u
@@ -76,21 +74,39 @@ source_setup() {
 
 source_setup "${ROS_SETUP}"
 pushd "${WORKSPACE}" >/dev/null
+# The C++ build also calls the CLI; keep that configuration in the disposable home.
+export RPP_HOME="${RPP_CONFIG_HOME}"
 
 if [[ "${LOCAL}" == false ]]; then
-  # Build the RPP workspace, but never its tests. The generated fixture plugins
-  # link against the resulting rpp_cpp and rpp_cpp_core shared libraries.
-  colcon build --cmake-args -DBUILD_TESTING=OFF
+  # rpp_dev/COLCON_IGNORE blocks recursive discovery. Start at the runtime package.
+  colcon build --base-paths "${WORKSPACE}/src/rpp_dev/src/rpp_cpp" \
+    --packages-select rpp_cpp --cmake-args -DBUILD_TESTING=OFF
 fi
 
-source_setup "${WORKSPACE}/install/setup.bash"
-export RPP_HOME="${RPP_CONFIG_HOME}"
 export RPP_CPP_CORE_PATH="${WORKSPACE}/build/rpp_cpp"
+for runtime_library in librpp_cpp.so librpp_cpp_core.so; do
+  if [[ ! -f "${RPP_CPP_CORE_PATH}/${runtime_library}" ]]; then
+    echo "Missing runtime library: ${RPP_CPP_CORE_PATH}/${runtime_library}. Build rpp_cpp before generating fixtures." >&2
+    exit 1
+  fi
+done
+
+source_setup "${WORKSPACE}/install/setup.bash"
 export RPP_USE_ROS2_COMPILATION=true
 
 rpp registry config set RPP_CPP_CORE_PATH "${RPP_CPP_CORE_PATH}"
 rpp registry config set USE_ROS2_COMPILATION true
+mkdir -p "${AUTOGEN_DIR}"
 rpp test setup_tmp_rpp_with_test_plugins "${AUTOGEN_DIR}" --override
+
+# Catch an outdated schema checkout before publishing a fixture rpp_cpp cannot use.
+for sample in AllocationFixedSample AllocationEnvelope AllocationEvolvedSample AllocationHintedSample; do
+  header="${AUTOGEN_DIR}/.rpp/interfaces/cpp/rpp_schema/rpp_testing/${sample}.hpp"
+  if [[ ! -f "${header}" ]]; then
+    echo "Missing generated fixture header: ${header}. Update rpp_common's test schemas." >&2
+    exit 1
+  fi
+done
 
 popd >/dev/null
 

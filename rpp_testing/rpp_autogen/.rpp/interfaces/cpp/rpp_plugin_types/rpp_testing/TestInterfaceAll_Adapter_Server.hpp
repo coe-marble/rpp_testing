@@ -89,8 +89,9 @@ public:
     }
 
 
-
     virtual ~TestInterfaceAll_Adapter_Server() noexcept = default;
+
+
 
     ::kj::Promise<void> funcEmpty(FuncEmptyContext /* context */) override {
         RPP_LOG_DEBUG(*logger_, "Received request: component=%s method=funcEmpty.", info_.name.c_str());

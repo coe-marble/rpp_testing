@@ -10,7 +10,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_plugin_complex_py.py",
             "IsCasadi": false,
-            "SourceLanguage": "python"
+            "SourceLanguage": "python",
+            "BuildType": "RelWithDebInfo"
         },
         "test_lib::ComponentPluginSimplePy": {
             "Name": "ComponentPluginSimplePy",
@@ -21,7 +22,8 @@
             "Description": "No description provided.",
             "SourceFile": "plugins/example_plugin_simple_py.py",
             "IsCasadi": false,
-            "SourceLanguage": "python"
+            "SourceLanguage": "python",
+            "BuildType": "RelWithDebInfo"
         },
         "test_lib::AllInterfaceTypesCpp": {
             "Name": "AllInterfaceTypesCpp",

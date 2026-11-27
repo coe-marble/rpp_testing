@@ -1,4 +1,5 @@
 #pragma once
+#include <rpp_cpp/list_definitions.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -18,6 +19,14 @@ struct FloatMatrix_Native {
     uint32_t rows;
     uint32_t columns;
     std::vector<double> values;
+
+    static constexpr const char* struct_name() noexcept { return "FloatMatrix"; }
+    template<typename Visitor>
+    void reflect(Visitor&& visitor) {
+        visitor("rows", rows);
+        visitor("columns", columns);
+        visitor("values", values);
+    }
 };
 
 
@@ -63,7 +72,9 @@ public:
                 return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::FloatMatrix::Reader reader) {
-                auto message = std::make_unique<capnp::MallocMessageBuilder>();
+                // The reader can include child data and fields from newer schemas.
+                const auto words = rpp::message_segment_words(reader.totalSize().wordCount);
+                auto message = std::make_unique<capnp::MallocMessageBuilder>(words);
                 message->setRoot(reader);
                 schema::rpp_common::FloatMatrix::Reader copied_reader =
                     message->getRoot<schema::rpp_common::FloatMatrix>();
@@ -136,8 +147,12 @@ public:
     public:
         using IsRppStruct = void;
         using CapnpType = schema::rpp_common::FloatMatrix;
-        FloatMatrix()
-            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>()),
+        FloatMatrix() : FloatMatrix(0) {}
+        // The hint includes the root pointer and any anticipated child storage.
+        explicit FloatMatrix(std::uint64_t initial_segment_words)
+            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>(
+                  rpp::message_segment_words(
+                      default_content_words(), initial_segment_words))),
               builder_(msg_builder_->initRoot<schema::rpp_common::FloatMatrix>()) {}
         FloatMatrix(schema::rpp_common::FloatMatrix::Builder builder)
             : msg_builder_(nullptr), builder_(builder) {}
@@ -150,6 +165,12 @@ public:
         // Delete copy constructor and copy assignment operator
         FloatMatrix(const FloatMatrix&) = delete;
         FloatMatrix& operator=(const FloatMatrix&) = delete;
+
+    private:
+        static std::uint64_t default_content_words() {
+            return std::uint64_t{capnp::sizeInWords<CapnpType>()};
+        }
+    public:
 
         rows_Proxy rows() { return rows_Proxy{builder_}; }
         uint32_t rows() const { return builder_.asReader().getRows(); }

@@ -12,7 +12,7 @@
   "FullyQualifiedClassName": "<class '_rpp_plugin_98c034da0eb36409.example_plugin_simple_py.ComponentPluginSimplePy'>",
   "ClassName": "ComponentPluginSimplePy",
   "PluginTypeLibrary": "rpp_testing",
-  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/libraries/rpp_testing/plugin_types/test_plugin_types.capnp",
   "PluginSharedLibraryPath": null,
   "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/MotionController2D.so",
   "PluginMetadata": {
@@ -98,5 +98,6 @@
       }
     },
     "Components": {}
-  }
+  },
+  "BuildType": "RelWithDebInfo"
 }

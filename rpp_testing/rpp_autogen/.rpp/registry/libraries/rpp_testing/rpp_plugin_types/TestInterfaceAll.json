@@ -1,6 +1,6 @@
 {
   "Name": "test",
-  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/libraries/rpp_testing/plugin_types/test_plugin_types.capnp",
   "ClassName": "TestInterfaceAll",
   "SourceLanguage": "capnp",
   "Methods": [
@@ -217,5 +217,5 @@
   "Id": "rpp_testing__test_interface_all",
   "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.TestInterfaceAll.TestInterfaceAll'>",
   "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_testing/test_plugin_types.capnp",
-  "RegistryPluginTypeFileId": "a372834618a0bc4b"
+  "RegistryPluginTypeFileId": "badbadbadbadbbd1"
 }

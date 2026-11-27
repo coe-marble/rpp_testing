@@ -20,6 +20,7 @@ namespace schemas {
 
 CAPNP_DECLARE_SCHEMA(abcd000000000000);
 CAPNP_DECLARE_SCHEMA(abcde00000000000);
+CAPNP_DECLARE_SCHEMA(abcdef0000000000);
 
 }  // namespace schemas
 }  // namespace capnp

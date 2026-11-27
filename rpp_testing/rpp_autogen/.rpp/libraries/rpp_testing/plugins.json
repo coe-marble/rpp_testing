@@ -1,4 +1,8 @@
 {
   "Plugins": [],
-  "PluginTypes": []
+  "PluginTypes": [
+    {
+      "Path": "plugin_types/test_plugin_types.capnp"
+    }
+  ]
 }

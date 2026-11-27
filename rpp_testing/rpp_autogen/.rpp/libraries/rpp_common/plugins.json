@@ -1,4 +1,11 @@
 {
   "Plugins": [],
-  "PluginTypes": []
+  "PluginTypes": [
+    {
+      "Path": "plugin_types/anot.capnp"
+    },
+    {
+      "Path": "plugin_types/msgs.capnp"
+    }
+  ]
 }

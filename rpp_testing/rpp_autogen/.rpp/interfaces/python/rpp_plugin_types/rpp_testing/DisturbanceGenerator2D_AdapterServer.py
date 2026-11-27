@@ -79,7 +79,7 @@ class DisturbanceGenerator2D_AdapterServer(capnp_schema.get_server_class("rpp_te
 
     def encode_lifecycle_state__(self, state, wire):
         if state is not None:
-            return CallbackResult.failure("This plugin does not provide lifecycle state")
+            return CallbackResult.failure("This plugin does not accept lifecycle state")
         wire.schemaId = 0
         return CallbackResult()
 

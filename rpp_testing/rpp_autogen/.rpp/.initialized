@@ -4,12 +4,6 @@
   "InitializedPlugins": [
     "rpp_testing::DisturbanceGenerator2D",
     "rpp_testing::MotionController2D",
-    "rpp_testing::TestInterfaceAll",
-    "rpp_common::Estimator2D",
-    "rpp_common::Estimator3D",
-    "rpp_common::DisturbanceGenerator2D",
-    "rpp_common::DisturbanceGenerator3D",
-    "rpp_common::DynamicalSystem2D",
-    "rpp_common::DynamicalSystem3D"
+    "rpp_testing::TestInterfaceAll"
   ]
 }

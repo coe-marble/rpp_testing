@@ -18,24 +18,24 @@ CAPNP_BEGIN_HEADER
 namespace capnp {
 namespace schemas {
 
-CAPNP_DECLARE_SCHEMA(a2bdf848ead3d6d3);
-CAPNP_DECLARE_SCHEMA(acad29a5df2c7bcb);
-CAPNP_DECLARE_SCHEMA(a5003aa9355768ea);
-CAPNP_DECLARE_SCHEMA(b3eeb54a307b293a);
-CAPNP_DECLARE_SCHEMA(c3ea9be9fa13346b);
-CAPNP_DECLARE_SCHEMA(bf45213eeef455fd);
-CAPNP_DECLARE_SCHEMA(90d1fee214b3fec4);
-CAPNP_DECLARE_SCHEMA(9306bb1397a678ac);
-CAPNP_DECLARE_SCHEMA(8f74e3de0f81ab45);
-CAPNP_DECLARE_SCHEMA(b2f55beae4e564a0);
-CAPNP_DECLARE_SCHEMA(b7d684458a65811c);
-CAPNP_DECLARE_SCHEMA(b6f93ba1aa4de75b);
-CAPNP_DECLARE_SCHEMA(ca9114d5f8791a0e);
-CAPNP_DECLARE_SCHEMA(de16970c9f7b393f);
-CAPNP_DECLARE_SCHEMA(d952952b9e0bd5ba);
-CAPNP_DECLARE_SCHEMA(f80fd0e549c14354);
-CAPNP_DECLARE_SCHEMA(9729389c1c00f5e0);
-CAPNP_DECLARE_SCHEMA(b8cbf0046755752c);
+CAPNP_DECLARE_SCHEMA(c0156ab8c6d902e9);
+CAPNP_DECLARE_SCHEMA(c52bcd3829688889);
+CAPNP_DECLARE_SCHEMA(d25a7241155f172c);
+CAPNP_DECLARE_SCHEMA(a9ad7c2d6a4b944e);
+CAPNP_DECLARE_SCHEMA(dbe3c4de453b519d);
+CAPNP_DECLARE_SCHEMA(dfcea0c3bf2173d8);
+CAPNP_DECLARE_SCHEMA(9d7cfd5ae8c58aee);
+CAPNP_DECLARE_SCHEMA(c4306ca2c7cdad08);
+CAPNP_DECLARE_SCHEMA(c8dc7b8928dde152);
+CAPNP_DECLARE_SCHEMA(f8c0ebeff3a7eadf);
+CAPNP_DECLARE_SCHEMA(b0ce2cecb78ee4f6);
+CAPNP_DECLARE_SCHEMA(a1cc639cb8d1eb78);
+CAPNP_DECLARE_SCHEMA(cb1778475383c8cd);
+CAPNP_DECLARE_SCHEMA(baf83bb84d448a92);
+CAPNP_DECLARE_SCHEMA(9a9950814b1819a8);
+CAPNP_DECLARE_SCHEMA(ea61179a6b25c176);
+CAPNP_DECLARE_SCHEMA(83a9dae002203924);
+CAPNP_DECLARE_SCHEMA(c29d2cdae2e37627);
 
 }  // namespace schemas
 }  // namespace capnp
@@ -51,7 +51,7 @@ struct Point2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a2bdf848ead3d6d3, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(c0156ab8c6d902e9, 2, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -66,7 +66,7 @@ struct Point3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(acad29a5df2c7bcb, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(c52bcd3829688889, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -81,7 +81,7 @@ struct Quaternion {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(a5003aa9355768ea, 4, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(d25a7241155f172c, 4, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -96,7 +96,7 @@ struct Pose2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b3eeb54a307b293a, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(a9ad7c2d6a4b944e, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -111,7 +111,7 @@ struct Pose3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(c3ea9be9fa13346b, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(dbe3c4de453b519d, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -126,7 +126,7 @@ struct Twist2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(bf45213eeef455fd, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(dfcea0c3bf2173d8, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -141,7 +141,7 @@ struct Twist3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(90d1fee214b3fec4, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(9d7cfd5ae8c58aee, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -156,7 +156,7 @@ struct Wrench2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9306bb1397a678ac, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(c4306ca2c7cdad08, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -171,7 +171,7 @@ struct Wrench3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(8f74e3de0f81ab45, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(c8dc7b8928dde152, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -186,7 +186,7 @@ struct Odometry2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b2f55beae4e564a0, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(f8c0ebeff3a7eadf, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -201,7 +201,7 @@ struct Odometry3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b7d684458a65811c, 0, 2)
+    CAPNP_DECLARE_STRUCT_HEADER(b0ce2cecb78ee4f6, 0, 2)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -216,7 +216,7 @@ struct Command {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b6f93ba1aa4de75b, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(a1cc639cb8d1eb78, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -231,7 +231,7 @@ struct FloatMatrix {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(ca9114d5f8791a0e, 1, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(cb1778475383c8cd, 1, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -246,7 +246,7 @@ struct VectorPlanar {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(de16970c9f7b393f, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(baf83bb84d448a92, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -261,7 +261,7 @@ struct VectorSpatial {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(d952952b9e0bd5ba, 6, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(9a9950814b1819a8, 6, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -276,7 +276,7 @@ struct Vector3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(f80fd0e549c14354, 3, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(ea61179a6b25c176, 3, 0)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -291,7 +291,7 @@ struct Path2D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(9729389c1c00f5e0, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(83a9dae002203924, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
@@ -306,7 +306,7 @@ struct Path3D {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(b8cbf0046755752c, 0, 1)
+    CAPNP_DECLARE_STRUCT_HEADER(c29d2cdae2e37627, 0, 1)
     #if !CAPNP_LITE
     static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE

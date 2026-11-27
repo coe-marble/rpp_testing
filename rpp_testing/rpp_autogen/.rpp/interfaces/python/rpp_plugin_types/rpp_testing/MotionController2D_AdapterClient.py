@@ -29,16 +29,16 @@ class MotionController2D_AdapterClient(MotionController2D):
     VectorPlanar = _VectorPlanar
 
     def on_configure(self, context) -> CallbackResult:
-        return CallbackResult.failure("Remote lifecycle control is not supported yet")
+        return CallbackResult.failure("Remote lifecycle callbacks must be invoked through the runtime")
 
     def on_cleanup(self) -> CallbackResult:
-        return CallbackResult.failure("Remote lifecycle control is not supported yet")
+        return CallbackResult.failure("Remote lifecycle callbacks must be invoked through the runtime")
 
     def on_activate(self) -> CallbackResult:
-        return CallbackResult.failure("Remote lifecycle control is not supported yet")
+        return CallbackResult.failure("Remote lifecycle callbacks must be invoked through the runtime")
 
     def on_deactivate(self) -> CallbackResult:
-        return CallbackResult.failure("Remote lifecycle control is not supported yet")
+        return CallbackResult.failure("Remote lifecycle callbacks must be invoked through the runtime")
 
     def __init__(self, logger: RppLogger | None = None):
         self._adapter_client_params: AdapterClientParams = None
@@ -182,6 +182,7 @@ class MotionController2D_AdapterClient(MotionController2D):
         self._owned_component_call_executor = None
         self._caller_loop = None
 
+
     def decode_lifecycle_state__(self, schema_id, payload):
         if schema_id:
             return CallbackResult.failure("This plugin does not accept lifecycle state"), None
@@ -189,7 +190,7 @@ class MotionController2D_AdapterClient(MotionController2D):
 
     def encode_lifecycle_state__(self, state, wire):
         if state is not None:
-            return CallbackResult.failure("This plugin does not provide lifecycle state")
+            return CallbackResult.failure("This plugin does not accept lifecycle state")
         wire.schemaId = 0
         return CallbackResult()
 

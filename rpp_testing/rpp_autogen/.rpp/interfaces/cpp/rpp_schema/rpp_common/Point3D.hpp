@@ -1,4 +1,5 @@
 #pragma once
+#include <rpp_cpp/list_definitions.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -18,6 +19,14 @@ struct Point3D_Native {
     double x;
     double y;
     double z;
+
+    static constexpr const char* struct_name() noexcept { return "Point3D"; }
+    template<typename Visitor>
+    void reflect(Visitor&& visitor) {
+        visitor("x", x);
+        visitor("y", y);
+        visitor("z", z);
+    }
 };
 
 
@@ -63,7 +72,9 @@ public:
                 return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Point3D::Reader reader) {
-                auto message = std::make_unique<capnp::MallocMessageBuilder>();
+                // The reader can include child data and fields from newer schemas.
+                const auto words = rpp::message_segment_words(reader.totalSize().wordCount);
+                auto message = std::make_unique<capnp::MallocMessageBuilder>(words);
                 message->setRoot(reader);
                 schema::rpp_common::Point3D::Reader copied_reader =
                     message->getRoot<schema::rpp_common::Point3D>();
@@ -140,8 +151,12 @@ public:
     public:
         using IsRppStruct = void;
         using CapnpType = schema::rpp_common::Point3D;
-        Point3D()
-            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>()),
+        Point3D() : Point3D(0) {}
+        // The hint includes the root pointer and any anticipated child storage.
+        explicit Point3D(std::uint64_t initial_segment_words)
+            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>(
+                  rpp::message_segment_words(
+                      default_content_words(), initial_segment_words))),
               builder_(msg_builder_->initRoot<schema::rpp_common::Point3D>()) {}
         Point3D(schema::rpp_common::Point3D::Builder builder)
             : msg_builder_(nullptr), builder_(builder) {}
@@ -154,6 +169,12 @@ public:
         // Delete copy constructor and copy assignment operator
         Point3D(const Point3D&) = delete;
         Point3D& operator=(const Point3D&) = delete;
+
+    private:
+        static std::uint64_t default_content_words() {
+            return std::uint64_t{capnp::sizeInWords<CapnpType>()};
+        }
+    public:
 
         x_Proxy x() { return x_Proxy{builder_}; }
         double x() const { return builder_.asReader().getX(); }

@@ -12,7 +12,7 @@
   "FullyQualifiedClassName": "rpp_testing::MotionController2D",
   "ClassName": "ComponentPluginSimpleCpp",
   "PluginTypeLibrary": "rpp_testing",
-  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "PluginTypeSourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/libraries/rpp_testing/plugin_types/test_plugin_types.capnp",
   "PluginSharedLibraryPath": "cpp/shared/test_lib/plugins/ComponentPluginSimpleCpp.so",
   "PluginTypeSharedLibraryPath": "cpp/shared/rpp_testing/plugin_types/MotionController2D.so",
   "PluginMetadata": {

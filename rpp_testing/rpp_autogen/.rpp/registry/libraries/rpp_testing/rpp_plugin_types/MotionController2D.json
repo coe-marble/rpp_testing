@@ -1,6 +1,6 @@
 {
   "Name": "MotionController2D",
-  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_common/rpp_common/common_plugin_types/rpp_testing/test_plugin_types.capnp",
+  "SourceFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/libraries/rpp_testing/plugin_types/test_plugin_types.capnp",
   "ClassName": "MotionController2D",
   "SourceLanguage": "capnp",
   "Methods": [
@@ -62,5 +62,5 @@
   "Id": "rpp_testing__motion_controller2_d",
   "FullyQualifiedClassName": "<class 'rpp_plugin_types.rpp_testing.MotionController2D.MotionController2D'>",
   "RegistryPluginTypeFile": "/workspaces/rpp/ros2_ws/src/rpp_dev/src/rpp_testing/rpp_testing/rpp_autogen/.rpp/registry/capnp/rpp_testing/test_plugin_types.capnp",
-  "RegistryPluginTypeFileId": "a372834618a0bc4b"
+  "RegistryPluginTypeFileId": "badbadbadbadbbd1"
 }

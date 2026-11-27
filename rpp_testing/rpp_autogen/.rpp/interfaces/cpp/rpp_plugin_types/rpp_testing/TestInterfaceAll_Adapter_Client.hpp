@@ -101,19 +101,19 @@ public:
 
 
     rpp::CallbackResult on_configure(const rpp::ComponentContext &) override {
-        return rpp::CallbackResult::failure("Remote lifecycle control is not supported yet");
+        return rpp::CallbackResult::failure("Remote lifecycle callbacks must be invoked through the runtime");
     }
 
     rpp::CallbackResult on_cleanup() override {
-        return rpp::CallbackResult::failure("Remote lifecycle control is not supported yet");
+        return rpp::CallbackResult::failure("Remote lifecycle callbacks must be invoked through the runtime");
     }
 
     rpp::CallbackResult on_activate() override {
-        return rpp::CallbackResult::failure("Remote lifecycle control is not supported yet");
+        return rpp::CallbackResult::failure("Remote lifecycle callbacks must be invoked through the runtime");
     }
 
     rpp::CallbackResult on_deactivate() override {
-        return rpp::CallbackResult::failure("Remote lifecycle control is not supported yet");
+        return rpp::CallbackResult::failure("Remote lifecycle callbacks must be invoked through the runtime");
     }
 
 

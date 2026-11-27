@@ -1,4 +1,5 @@
 #pragma once
+#include <rpp_cpp/list_definitions.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -18,6 +19,14 @@ struct TestStruct2_Native {
     double linear;
     double angular;
     ::rpp_schema::rpp_testing::TestStruct1_Native struct1;
+
+    static constexpr const char* struct_name() noexcept { return "TestStruct2"; }
+    template<typename Visitor>
+    void reflect(Visitor&& visitor) {
+        visitor("linear", linear);
+        visitor("angular", angular);
+        visitor("struct1", struct1);
+    }
 };
 
 
@@ -63,7 +72,9 @@ public:
                 return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_testing::TestStruct2::Reader reader) {
-                auto message = std::make_unique<capnp::MallocMessageBuilder>();
+                // The reader can include child data and fields from newer schemas.
+                const auto words = rpp::message_segment_words(reader.totalSize().wordCount);
+                auto message = std::make_unique<capnp::MallocMessageBuilder>(words);
                 message->setRoot(reader);
                 schema::rpp_testing::TestStruct2::Reader copied_reader =
                     message->getRoot<schema::rpp_testing::TestStruct2>();
@@ -128,8 +139,12 @@ public:
     public:
         using IsRppStruct = void;
         using CapnpType = schema::rpp_testing::TestStruct2;
-        TestStruct2()
-            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>()),
+        TestStruct2() : TestStruct2(0) {}
+        // The hint includes the root pointer and any anticipated child storage.
+        explicit TestStruct2(std::uint64_t initial_segment_words)
+            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>(
+                  rpp::message_segment_words(
+                      default_content_words(), initial_segment_words))),
               builder_(msg_builder_->initRoot<schema::rpp_testing::TestStruct2>()) {}
         TestStruct2(schema::rpp_testing::TestStruct2::Builder builder)
             : msg_builder_(nullptr), builder_(builder) {}
@@ -142,6 +157,12 @@ public:
         // Delete copy constructor and copy assignment operator
         TestStruct2(const TestStruct2&) = delete;
         TestStruct2& operator=(const TestStruct2&) = delete;
+
+    private:
+        static std::uint64_t default_content_words() {
+            return std::uint64_t{capnp::sizeInWords<CapnpType>()};
+        }
+    public:
 
         linear_Proxy linear() { return linear_Proxy{builder_}; }
         double linear() const { return builder_.asReader().getLinear(); }

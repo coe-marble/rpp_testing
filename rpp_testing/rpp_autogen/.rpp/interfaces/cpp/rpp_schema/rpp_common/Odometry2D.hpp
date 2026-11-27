@@ -1,4 +1,5 @@
 #pragma once
+#include <rpp_cpp/list_definitions.hpp>
 #include <string>
 #include <vector>
 #include <map>
@@ -18,6 +19,13 @@ struct Odometry2D_Native {
 
     ::rpp_schema::rpp_common::Pose2D_Native pose;
     ::rpp_schema::rpp_common::Twist2D_Native twist;
+
+    static constexpr const char* struct_name() noexcept { return "Odometry2D"; }
+    template<typename Visitor>
+    void reflect(Visitor&& visitor) {
+        visitor("pose", pose);
+        visitor("twist", twist);
+    }
 };
 
 
@@ -63,7 +71,9 @@ public:
                 return Const(this->reader_, this->message_lifetime_);
             }
             static Const from_wire(schema::rpp_common::Odometry2D::Reader reader) {
-                auto message = std::make_unique<capnp::MallocMessageBuilder>();
+                // The reader can include child data and fields from newer schemas.
+                const auto words = rpp::message_segment_words(reader.totalSize().wordCount);
+                auto message = std::make_unique<capnp::MallocMessageBuilder>(words);
                 message->setRoot(reader);
                 schema::rpp_common::Odometry2D::Reader copied_reader =
                     message->getRoot<schema::rpp_common::Odometry2D>();
@@ -100,8 +110,12 @@ public:
     public:
         using IsRppStruct = void;
         using CapnpType = schema::rpp_common::Odometry2D;
-        Odometry2D()
-            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>()),
+        Odometry2D() : Odometry2D(0) {}
+        // The hint includes the root pointer and any anticipated child storage.
+        explicit Odometry2D(std::uint64_t initial_segment_words)
+            : msg_builder_(std::make_unique<capnp::MallocMessageBuilder>(
+                  rpp::message_segment_words(
+                      default_content_words(), initial_segment_words))),
               builder_(msg_builder_->initRoot<schema::rpp_common::Odometry2D>()) {}
         Odometry2D(schema::rpp_common::Odometry2D::Builder builder)
             : msg_builder_(nullptr), builder_(builder) {}
@@ -114,6 +128,12 @@ public:
         // Delete copy constructor and copy assignment operator
         Odometry2D(const Odometry2D&) = delete;
         Odometry2D& operator=(const Odometry2D&) = delete;
+
+    private:
+        static std::uint64_t default_content_words() {
+            return std::uint64_t{capnp::sizeInWords<CapnpType>()};
+        }
+    public:
 
         ::rpp_schema::rpp_common::Pose2D pose() { return ::rpp_schema::rpp_common::Pose2D(builder_.getPose()); }
         ::rpp_schema::rpp_common::Pose2D::Const pose() const { return ::rpp_schema::rpp_common::Pose2D::Const(builder_.asReader().getPose()); }
